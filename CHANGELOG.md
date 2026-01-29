@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.2.4](https://github.com/distr-sh/hello-distr/compare/0.2.3...0.2.4) (2026-01-28)
+
+
+### Bug Fixes
+
+* **deps:** update nextjs monorepo to v16.1.5 ([#560](https://github.com/distr-sh/hello-distr/issues/560)) ([488d8ea](https://github.com/distr-sh/hello-distr/commit/488d8ea04b947bfcfb56c9df1b273a977bf55773))
+* **deps:** update nextjs monorepo to v16.1.6 ([#565](https://github.com/distr-sh/hello-distr/issues/565)) ([16bafdd](https://github.com/distr-sh/hello-distr/commit/16bafdd3887ae648a1fa07c47a38a2c767dc4705))
+* **deps:** update react monorepo to v19.2.4 ([#561](https://github.com/distr-sh/hello-distr/issues/561)) ([d7df767](https://github.com/distr-sh/hello-distr/commit/d7df7673b0bb99f142be245a1ea3656cb9ac2f14))
+
+
+### Other
+
+* **deps:** update dependency @types/node to v25.1.0 ([#567](https://github.com/distr-sh/hello-distr/issues/567)) ([30efc35](https://github.com/distr-sh/hello-distr/commit/30efc358db920651f4a2e32dd5efc6afd40a8fd1))
+* **deps:** update dependency @types/react to v19.2.10 ([#564](https://github.com/distr-sh/hello-distr/issues/564)) ([bfb2567](https://github.com/distr-sh/hello-distr/commit/bfb25677657ecbe2d00fda3fa28d2a9f92634a1c))
+* **deps:** update docker/login-action action to v3.7.0 ([#566](https://github.com/distr-sh/hello-distr/issues/566)) ([686ba3e](https://github.com/distr-sh/hello-distr/commit/686ba3e31038263b760a7724faa102b22f3ac38d))
+* **deps:** update typescript-eslint monorepo to v8.54.0 ([#563](https://github.com/distr-sh/hello-distr/issues/563)) ([95b50c6](https://github.com/distr-sh/hello-distr/commit/95b50c694909c13d455e048af323e93f29e98729))
+
 ## [0.2.3](https://github.com/distr-sh/hello-distr/compare/0.2.2...0.2.3) (2026-01-26)
 
 
