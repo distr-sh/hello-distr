@@ -23,7 +23,7 @@ services:
       - app_network
 
   backend:
-    image: ghcr.io/distr-sh/hello-distr/backend:0.2.4 # x-release-please-version
+    image: ghcr.io/distr-sh/hello-distr/backend:0.3.0 # x-release-please-version
     environment:
       <<: *shared-env
       DB_URL: postgresql://${HELLO_DISTR_DB_USER:?error}:${HELLO_DISTR_DB_PASSWORD:?error}@postgres/${HELLO_DISTR_DB_NAME:?error}?sslmode=disable
@@ -43,7 +43,7 @@ services:
       - app_network
 
   frontend:
-    image: ghcr.io/distr-sh/hello-distr/frontend:0.2.4 # x-release-please-version
+    image: ghcr.io/distr-sh/hello-distr/frontend:0.3.0 # x-release-please-version
     environment:
       <<: *shared-env
       NEXT_PUBLIC_API_URL: "http://${HELLO_DISTR_HOST:?error}/api"
@@ -59,7 +59,7 @@ services:
       - app_network
 
   proxy:
-    image: ghcr.io/distr-sh/hello-distr/proxy:0.2.4 # x-release-please-version
+    image: ghcr.io/distr-sh/hello-distr/proxy:0.3.0 # x-release-please-version
     environment:
       <<: *shared-env
       HOST: ${HELLO_DISTR_HOST:?error}
@@ -77,7 +77,7 @@ services:
       - app_network
 
   jobs:
-    image: ghcr.io/distr-sh/hello-distr/jobs:0.2.4 # x-release-please-version
+    image: ghcr.io/distr-sh/hello-distr/jobs:0.3.0 # x-release-please-version
     depends_on:
       backend:
         condition: service_healthy
