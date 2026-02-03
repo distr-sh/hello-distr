@@ -1,0 +1,109 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Build and Deploy
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "*"
+    tags:
+      - "*"
+
+jobs:
+  build:
+    name: Build ${{ matrix.service }}
+    timeout-minutes: 20
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      matrix:
+        include:
+          - service: backend
+            context: backend
+            description: Hello Distr Backend
+            build-args: ""
+          - service: frontend
+            context: frontend
+            description: Hello Distr Frontend
+            build-args: |
+              VERSION=${{ github.ref_name }}
+          - service: proxy
+            context: proxy
+            description: Hello Distr Proxy
+            build-args: ""
+          - service: jobs
+            context: jobs
+            description: Hello Distr Jobs
+            build-args: ""
+
+    steps:
+      - name: Login to GitHub Container Registry
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3.7.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3.12.0
+      - name: Generate Docker Metadata
+        id: meta
+        uses: docker/metadata-action@c299e40c65443455700f0fdfc63efafe5b349051 # v5.10.0
+        with:
+          images: ghcr.io/distr-sh/hello-distr/${{ matrix.service }}
+          tags: |
+            type=ref,event=branch
+            type=sha,event=branch
+            type=semver,pattern={{version}}
+          labels: |
+            org.opencontainers.image.description=${{ matrix.description }}
+            org.opencontainers.image.vendor=Distr
+      - name: Docker build (push only for tag)
+        uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6.18.0
+        with:
+          platforms: ${{ startsWith(github.ref, 'refs/tags/') && 'linux/amd64,linux/arm64' || 'linux/amd64' }}
+          context: "{{defaultContext}}:${{ matrix.context }}"
+          push: ${{ startsWith(github.ref, 'refs/tags/') }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha,scope=${{ matrix.service }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.service }}
+          build-args: ${{ matrix.build-args }}
+
+  distr:
+    name: Update deployments
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    strategy:
+      matrix:
+        include:
+          - DISTR_TOKEN_SECRET: DISTR_TOKEN
+            DISTR_APPLICATION_ID_VAR: DISTR_APPLICATION_ID
+          - DISTR_TOKEN_SECRET: DISTR_TOKEN_PMIG
+            DISTR_APPLICATION_ID_VAR: DISTR_APPLICATION_ID_PMIG
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v6
+
+      - name: Create Distr Version
+        id: distr-create-version
+        uses: distr-sh/distr-create-version-action@v1.4.1
+        with:
+          api-token: ${{ secrets[matrix.DISTR_TOKEN_SECRET] }}
+          api-base: "https://demo.distr.sh/api/v1"
+          application-id: ${{ vars[matrix.DISTR_APPLICATION_ID_VAR] }}
+          version-name: ${{ github.ref_name }}
+          compose-file: ${{ github.workspace }}/deploy/docker-compose.yaml
+          template-file: ${{ github.workspace }}/deploy/env.template
+          link-template: "http://{{ .Env.HELLO_DISTR_HOST }}"
+          update-deployments: true
+
+      - name: Print Application Version ID
+        id: output
+        run: echo "${{ steps.distr-create-version.outputs.created-version-id }}"
