@@ -4,6 +4,7 @@ name: hello-distr
 # note: only share non-sensitive data to avoid accidental exposure of sensitive values (like passwords) to other containers
 x-shared-env: &shared-env
   HELLO_DISTR_HOST: ${HELLO_DISTR_HOST:?error}
+  HELLO_DISTR_PROTOCOL: ${HELLO_DISTR_PROTOCOL:-http}
   HELLO_DISTR_DB_NAME: ${HELLO_DISTR_DB_NAME:?error}
 
 services:
@@ -46,7 +47,7 @@ services:
     image: ghcr.io/distr-sh/hello-distr/frontend:0.3.0 # x-release-please-version
     environment:
       <<: *shared-env
-      NEXT_PUBLIC_API_URL: "http://${HELLO_DISTR_HOST:?error}/api"
+      NEXT_PUBLIC_API_URL: "${HELLO_DISTR_PROTOCOL:-http}://${HELLO_DISTR_HOST:?error}/api"
     depends_on:
       backend:
         condition: service_healthy
@@ -63,8 +64,10 @@ services:
     environment:
       <<: *shared-env
       HOST: ${HELLO_DISTR_HOST:?error}
+      PROTOCOL: ${HELLO_DISTR_PROTOCOL:-http}
     ports:
       - "80:80"
+      - "443:443"
     depends_on:
       backend:
         condition: service_healthy

@@ -85,7 +85,7 @@ jobs:
           version-name: ${{ github.ref_name }}
           compose-file: ${{ github.workspace }}/deploy/docker-compose.yaml
           template-file: ${{ github.workspace }}/deploy/env.template
-          link-template: "http://{{ .Env.HELLO_DISTR_HOST }}"
+          link-template: "{{ .Env.HELLO_DISTR_PROTOCOL }}://{{ .Env.HELLO_DISTR_HOST }}"
           update-deployments: true
 
       - name: Print Application Version ID
