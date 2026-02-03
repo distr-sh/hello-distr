@@ -50,7 +50,6 @@ services:
     depends_on:
       backend:
         condition: service_healthy
-    restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:3000"]
       interval: 5s
@@ -71,7 +70,6 @@ services:
         condition: service_healthy
       frontend:
         condition: service_healthy
-    restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:80"]
       interval: 5s
