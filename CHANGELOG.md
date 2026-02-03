@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/distr-sh/hello-distr/compare/0.3.0...0.4.0) (2026-02-03)
+
+
+### Features
+
+* support caddy ssl ([#586](https://github.com/distr-sh/hello-distr/issues/586)) ([565e058](https://github.com/distr-sh/hello-distr/commit/565e0581b15fa18610ef51e9a9062d5142575644))
+
 ## [0.3.0](https://github.com/distr-sh/hello-distr/compare/0.2.4...0.3.0) (2026-02-03)
 
 
