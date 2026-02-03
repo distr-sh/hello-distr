@@ -1,18 +1,7 @@
-http://{$HOST} {
-	log stderr
-	@https_only expression `{$PROTOCOL} == "https"`
-	redir @https_only https://{host}{uri} permanent
-
-	handle_path /api/* {
-	  reverse_proxy backend:5000
-	}
-	reverse_proxy frontend:3000
-}
-
-https://{$HOST} {
+{$HOST} {
 	log stderr
 	handle_path /api/* {
-	  reverse_proxy backend:5000
+		reverse_proxy backend:5000
 	}
 	reverse_proxy frontend:3000
 }
