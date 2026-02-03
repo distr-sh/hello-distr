@@ -1,5 +1,36 @@
 # Changelog
 
+## [0.3.0](https://github.com/distr-sh/hello-distr/compare/0.2.4...0.3.0) (2026-02-03)
+
+
+### Features
+
+* add jobs container ([#584](https://github.com/distr-sh/hello-distr/issues/584)) ([cab6a25](https://github.com/distr-sh/hello-distr/commit/cab6a252990c34c3d1466780c18714ec42f3e9bc))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @heroui/button to v2.2.30 ([#568](https://github.com/distr-sh/hello-distr/issues/568)) ([d21426f](https://github.com/distr-sh/hello-distr/commit/d21426fabc0e71c0595a1aa73b6db193c9625ca5))
+* **deps:** update dependency @heroui/code to v2.2.23 ([#569](https://github.com/distr-sh/hello-distr/issues/569)) ([2328654](https://github.com/distr-sh/hello-distr/commit/23286547637a6067427524110fd478f890c99775))
+* **deps:** update dependency @heroui/input to v2.4.31 ([#571](https://github.com/distr-sh/hello-distr/issues/571)) ([556c823](https://github.com/distr-sh/hello-distr/commit/556c82363e7d75b64fab70feb374e6799769b2de))
+* **deps:** update dependency @heroui/kbd to v2.2.24 ([#572](https://github.com/distr-sh/hello-distr/issues/572)) ([5023e81](https://github.com/distr-sh/hello-distr/commit/5023e81f29713fe2dac91797a0aebd0e750e100d))
+* **deps:** update dependency @heroui/listbox to v2.3.29 ([#573](https://github.com/distr-sh/hello-distr/issues/573)) ([9618245](https://github.com/distr-sh/hello-distr/commit/961824501b71efc937bfef93d7aa2663ce5285e2))
+* **deps:** update dependency @heroui/navbar to v2.2.28 ([#574](https://github.com/distr-sh/hello-distr/issues/574)) ([2780e51](https://github.com/distr-sh/hello-distr/commit/2780e5135facf8399356b16bc22c8f5ef7b7ef8e))
+* **deps:** update dependency @heroui/snippet to v2.2.31 ([#575](https://github.com/distr-sh/hello-distr/issues/575)) ([ab6fd36](https://github.com/distr-sh/hello-distr/commit/ab6fd3695d7f57ea2b2f6385c792449788fcb0b7))
+* **deps:** update dependency @heroui/system to v2.4.26 ([#576](https://github.com/distr-sh/hello-distr/issues/576)) ([252f790](https://github.com/distr-sh/hello-distr/commit/252f790268db492f9c6d7ba7f6bad3f4156c2fa0))
+* **deps:** update dependency @heroui/theme to v2.4.26 ([#577](https://github.com/distr-sh/hello-distr/issues/577)) ([3f67961](https://github.com/distr-sh/hello-distr/commit/3f67961738c12ccb0663abdf7120157cfe565850))
+* **deps:** update dependency framer-motion to v12.29.3 ([#582](https://github.com/distr-sh/hello-distr/issues/582)) ([209a002](https://github.com/distr-sh/hello-distr/commit/209a002043b30fb1d23be306a5473a839dc3ccd4))
+* **deps:** update dependency framer-motion to v12.30.0 ([#583](https://github.com/distr-sh/hello-distr/issues/583)) ([3974325](https://github.com/distr-sh/hello-distr/commit/3974325d97b2221d0a21e265353b571f56d9f881))
+* **deps:** update dependency framer-motion to v12.30.1 ([#585](https://github.com/distr-sh/hello-distr/issues/585)) ([8b7477d](https://github.com/distr-sh/hello-distr/commit/8b7477d3e34a31b212b39f05941802ca0db44739))
+
+
+### Other
+
+* **deps:** update dependency @playwright/test to v1.58.1 ([#578](https://github.com/distr-sh/hello-distr/issues/578)) ([5ac4fbf](https://github.com/distr-sh/hello-distr/commit/5ac4fbf4fb080fd5b9639883d71f61df265e0fd5))
+* **deps:** update dependency @types/node to v25.2.0 ([#581](https://github.com/distr-sh/hello-distr/issues/581)) ([0c89ae3](https://github.com/distr-sh/hello-distr/commit/0c89ae3e16e554d279d777c2f1b0723d75cf5545))
+* **deps:** update dependency autoprefixer to v10.4.24 ([#579](https://github.com/distr-sh/hello-distr/issues/579)) ([f9f57b9](https://github.com/distr-sh/hello-distr/commit/f9f57b927eb764a16d77ea57c1ef657625f83c38))
+* **deps:** update dependency intl-messageformat to v11.1.2 ([#580](https://github.com/distr-sh/hello-distr/issues/580)) ([f5ccb38](https://github.com/distr-sh/hello-distr/commit/f5ccb3825ba8060a137e4089e92091644496d8f8))
+
 ## [0.2.4](https://github.com/distr-sh/hello-distr/compare/0.2.3...0.2.4) (2026-01-28)
 
 
