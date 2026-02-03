@@ -63,8 +63,10 @@ services:
     environment:
       <<: *shared-env
       HOST: ${HELLO_DISTR_HOST:?error}
+      PROTOCOL: ${HELLO_DISTR_PROTOCOL:-http}
     ports:
       - "80:80"
+      - "443:443"
     depends_on:
       backend:
         condition: service_healthy
