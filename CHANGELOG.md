@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/distr-sh/hello-distr/compare/0.4.0...0.4.1) (2026-02-03)
+
+
+### Bug Fixes
+
+* **proxy:** always listen on 80 and 443 ([#588](https://github.com/distr-sh/hello-distr/issues/588)) ([112b71c](https://github.com/distr-sh/hello-distr/commit/112b71c4ad37f3f70aa6e1f90198f1dfd458bde6))
+
 ## [0.4.0](https://github.com/distr-sh/hello-distr/compare/0.3.0...0.4.0) (2026-02-03)
 
 
