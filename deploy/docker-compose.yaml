@@ -14,7 +14,6 @@ services:
       POSTGRES_USER: ${HELLO_DISTR_DB_USER:?error}
       POSTGRES_PASSWORD: ${HELLO_DISTR_DB_PASSWORD:?error}
       POSTGRES_DB: ${HELLO_DISTR_DB_NAME:?error}
-    restart: unless-stopped
     healthcheck:
       test: pg_isready -h localhost -U ${HELLO_DISTR_DB_USER:?error} -d ${HELLO_DISTR_DB_NAME:?error}
       interval: 5s
@@ -31,7 +30,6 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    restart: unless-stopped
     healthcheck:
       test:
         [
@@ -76,6 +74,17 @@ services:
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:80"]
+      interval: 5s
+    networks:
+      - app_network
+
+  jobs:
+    image: ghcr.io/distr-sh/hello-distr/jobs:0.2.4 # x-release-please-version
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "pgrep", "busybox"]
       interval: 5s
     networks:
       - app_network
