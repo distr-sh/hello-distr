@@ -1,0 +1,132 @@
+# Default values for hello-distr.
+
+# Shared application configuration
+config:
+  host: "hello-distr.local"
+  protocol: "http"
+  dbName: "hello-distr"
+
+# Backend (Python Flask API)
+backend:
+  replicaCount: 1
+  image:
+    repository: ghcr.io/distr-sh/hello-distr/backend
+    pullPolicy: IfNotPresent
+    tag: ""
+  service:
+    type: ClusterIP
+    port: 5000
+  resources: {}
+  livenessProbe:
+    httpGet:
+      path: /health
+      port: http
+  readinessProbe:
+    httpGet:
+      path: /health
+      port: http
+
+# Frontend (Next.js)
+frontend:
+  replicaCount: 1
+  image:
+    repository: ghcr.io/distr-sh/hello-distr/frontend
+    pullPolicy: IfNotPresent
+    tag: ""
+  env: []
+  service:
+    type: ClusterIP
+    port: 3000
+  resources: {}
+  livenessProbe:
+    httpGet:
+      path: /
+      port: http
+  readinessProbe:
+    httpGet:
+      path: /
+      port: http
+
+# Proxy (Caddy reverse proxy)
+proxy:
+  replicaCount: 1
+  image:
+    repository: ghcr.io/distr-sh/hello-distr/proxy
+    pullPolicy: IfNotPresent
+    tag: ""
+  service:
+    type: NodePort
+    port: 80
+    httpsPort: 443
+  resources: {}
+  livenessProbe:
+    httpGet:
+      path: /healthz
+      port: healthz
+  readinessProbe:
+    httpGet:
+      path: /healthz
+      port: healthz
+
+# Jobs (Alpine cron)
+jobs:
+  replicaCount: 1
+  image:
+    repository: ghcr.io/distr-sh/hello-distr/jobs
+    pullPolicy: IfNotPresent
+    tag: ""
+  resources: {}
+
+# Ingress (disabled by default, proxy handles routing)
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: hello-distr.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+# Service Account
+serviceAccount:
+  create: true
+  automount: true
+  annotations: {}
+  name: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+podLabels: {}
+podSecurityContext: {}
+securityContext: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+# PostgreSQL subchart (Bitnami)
+postgresql:
+  enabled: true
+  auth:
+    username: "hello-distr"
+    password: "hello-distr"
+    database: "hello-distr"
+    existingSecret: ""
+  architecture: standalone
+  service:
+    ports:
+      postgresql: 5432
+  image:
+    repository: bitnamilegacy/postgresql
+
+# External database (when postgresql.enabled=false)
+externalDatabase:
+  host: ""
+  port: 5432
+  uri: ""
+  existingSecret: ""
+  existingSecretUriKey: "uri"

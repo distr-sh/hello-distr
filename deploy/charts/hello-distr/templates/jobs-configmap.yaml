@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "hello-distr.fullname" . }}-jobs
+  labels:
+    {{- include "hello-distr.component.labels" (dict "component" "jobs" "context" .) | nindent 4 }}
+data:
+  root: |
+    # ┌───────────── minute (0-59)
+    # │ ┌───────────── hour (0-23)
+    # │ │ ┌───────────── day of month (1-31)
+    # │ │ │ ┌───────────── month (1-12)
+    # │ │ │ │ ┌───────────── day of week (0-6) (Sunday to Saturday)
+    # │ │ │ │ │
+    # * * * * * command
+
+    # Execute a local command
+    * * * * * echo "Hello world"
+
+    # Call the internal API of the backend service
+    * * * * * wget -O- http://{{ include "hello-distr.fullname" . }}-backend:{{ .Values.backend.service.port }}/health
