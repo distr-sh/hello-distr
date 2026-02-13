@@ -11,7 +11,7 @@
     "buildconfig": "node hack/update-frontend-version.js"
   },
   "dependencies": {
-    "@heroui/button": "2.2.30",
+    "@heroui/button": "2.2.31",
     "@heroui/code": "2.2.23",
     "@heroui/input": "2.4.31",
     "@heroui/kbd": "2.2.24",
