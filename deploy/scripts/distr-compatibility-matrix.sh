@@ -26,9 +26,9 @@ run_kubeconform() {
 # Map kubeconform status to display label
 status_label() {
   case "$1" in
-    statusValid)   echo "pass" ;;
+    statusValid)   echo "✅" ;;
     statusSkipped) echo "skip" ;;
-    *)             echo "FAIL" ;;
+    *)             echo "❌" ;;
   esac
 }
 

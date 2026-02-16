@@ -71,10 +71,10 @@ done
         '.resources[]? | select(.kind == $kind and .version == $ver and .name == $name) | .status' \
         "${JSON_FILES[$i]}" | head -1)
       case "$status" in
-        statusValid)   row+=" pass |" ;;
+        statusValid)   row+=" ✅ |" ;;
         statusSkipped) row+=" skip |" ;;
         "")            row+=" - |" ;;
-        *)             row+=" FAIL |" ;;
+        *)             row+=" ❌ |" ;;
       esac
     done
     echo "$row"
