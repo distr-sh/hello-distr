@@ -33,7 +33,7 @@ status_label() {
 }
 
 # Validate chart against a single Kubernetes version.
-# Produces kubeconform-{version}.json and kubeconform-report-{version}.md.
+# Produces kubeconform-{version}.json and compatibility-matrix-{version}.md.
 # Returns 0 on success, 1 on failure.
 validate_version() {
   local version="$1"
@@ -53,6 +53,12 @@ validate_version() {
       -schema-location default \
       -schema-location "$SCHEMA_LOCATION" \
     > "$json_file" || true
+
+  if ! jq empty "$json_file" 2>/dev/null; then
+    echo "  FAIL: kubeconform did not produce valid JSON output for Kubernetes ${version}"
+    cat "$json_file"
+    return 1
+  fi
 
   local valid invalid errors skipped
   valid=$(jq '.summary.valid' "$json_file")

@@ -86,7 +86,6 @@ done
   for i in "${!VERSIONS[@]}"; do
     version="${VERSIONS[$i]}"
     json_file="${JSON_FILES[$i]}"
-    report_file="${REPORT_DIR}/kubeconform-report-${version}.md"
 
     echo "## Kubernetes ${version}"
     echo ""

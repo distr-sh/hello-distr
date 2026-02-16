@@ -75,8 +75,8 @@ depends = ["deps"]
 
 [tasks."chart:validate"]
 description = 'Validate Helm chart with kubeconform across Kubernetes versions'
-run = './deploy/scripts/kubeconform.sh'
+run = './deploy/scripts/distr-compatibility-matrix.sh'
 
 [tasks."chart:validate:selftest"]
 description = 'Run kubeconform self-tests'
-run = './deploy/scripts/kubeconform-selftest.sh'
+run = './deploy/scripts/distr-compatibility-matrix-selftest.sh'
