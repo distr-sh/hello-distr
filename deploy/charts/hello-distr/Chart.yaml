@@ -1,0 +1,19 @@
+apiVersion: v2
+name: hello-distr
+description: A sample multi-service application for the Distr platform
+keywords:
+  - hello-distr
+  - distr
+  - sample
+maintainers:
+  - name: Distr
+    url: https://github.com/distr-sh
+home: https://github.com/distr-sh/hello-distr
+type: application
+version: 0.4.1
+appVersion: 0.4.1
+dependencies:
+  - name: postgresql
+    repository: oci://registry-1.docker.io/bitnamicharts
+    version: 16.x.x
+    condition: postgresql.enabled

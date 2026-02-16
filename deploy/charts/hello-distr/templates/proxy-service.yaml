@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "hello-distr.fullname" . }}-proxy
+  labels:
+    {{- include "hello-distr.component.labels" (dict "component" "proxy" "context" .) | nindent 4 }}
+spec:
+  type: {{ .Values.proxy.service.type }}
+  ports:
+    - port: {{ .Values.proxy.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+    - port: {{ .Values.proxy.service.httpsPort }}
+      targetPort: https
+      protocol: TCP
+      name: https
+  selector:
+    {{- include "hello-distr.component.selectorLabels" (dict "component" "proxy" "context" .) | nindent 4 }}
