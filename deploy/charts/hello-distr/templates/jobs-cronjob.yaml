@@ -1,0 +1,73 @@
+{{- range .Values.jobs.items }}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ printf "%s-jobs-%s" (include "hello-distr.fullname" $) .name | trunc 63 | trimSuffix "-" }}
+  labels:
+    {{- include "hello-distr.component.labels" (dict "component" "jobs" "context" $) | nindent 4 }}
+    hello-distr/job-name: {{ .name }}
+spec:
+  schedule: {{ .schedule | quote }}
+  concurrencyPolicy: {{ $.Values.jobs.concurrencyPolicy | default "Forbid" }}
+  successfulJobsHistoryLimit: {{ $.Values.jobs.successfulJobsHistoryLimit | default 3 }}
+  failedJobsHistoryLimit: {{ $.Values.jobs.failedJobsHistoryLimit | default 3 }}
+  jobTemplate:
+    metadata:
+      labels:
+        {{- include "hello-distr.component.labels" (dict "component" "jobs" "context" $) | nindent 8 }}
+        hello-distr/job-name: {{ .name }}
+    spec:
+      template:
+        metadata:
+          {{- with $.Values.podAnnotations }}
+          annotations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          labels:
+            {{- include "hello-distr.component.labels" (dict "component" "jobs" "context" $) | nindent 12 }}
+            hello-distr/job-name: {{ .name }}
+            {{- with $.Values.podLabels }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
+        spec:
+          {{- with $.Values.imagePullSecrets }}
+          imagePullSecrets:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          serviceAccountName: {{ include "hello-distr.serviceAccountName" $ }}
+          {{- with $.Values.podSecurityContext }}
+          securityContext:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          restartPolicy: Never
+          containers:
+            - name: {{ .name }}
+              {{- with $.Values.securityContext }}
+              securityContext:
+                {{- toYaml . | nindent 16 }}
+              {{- end }}
+              image: "{{ $.Values.jobs.image.repository }}:{{ $.Values.jobs.image.tag | default $.Chart.AppVersion }}"
+              imagePullPolicy: {{ $.Values.jobs.image.pullPolicy }}
+              command:
+                {{- toYaml .command | nindent 16 }}
+              env:
+                - name: BACKEND_URL
+                  value: "http://{{ include "hello-distr.fullname" $ }}-backend:{{ $.Values.backend.service.port }}"
+              {{- with $.Values.jobs.resources }}
+              resources:
+                {{- toYaml . | nindent 16 }}
+              {{- end }}
+          {{- with $.Values.nodeSelector }}
+          nodeSelector:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with $.Values.affinity }}
+          affinity:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with $.Values.tolerations }}
+          tolerations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+{{- end }}

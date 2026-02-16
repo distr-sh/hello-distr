@@ -68,14 +68,29 @@ proxy:
       path: /healthz
       port: healthz
 
-# Jobs (Alpine cron)
+# Jobs (Kubernetes CronJobs)
 jobs:
-  replicaCount: 1
   image:
     repository: ghcr.io/distr-sh/hello-distr/jobs
     pullPolicy: IfNotPresent
     tag: ""
   resources: {}
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  items:
+    - name: hello-world
+      schedule: "* * * * *"
+      command:
+        - echo
+        - Hello world
+    - name: health-check
+      schedule: "* * * * *"
+      command:
+        - wget
+        - -q
+        - -O-
+        - "$(BACKEND_URL)/health"
 
 # Ingress (disabled by default, proxy handles routing)
 ingress:
