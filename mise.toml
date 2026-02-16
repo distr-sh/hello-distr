@@ -1,6 +1,7 @@
 [tools]
 node = "24"
 python = "3.14.3"
+kubeconform = "0.7.0"
 
 [env]
 _.file = ['backend/.env.development']
@@ -71,3 +72,11 @@ trap "kill $BACKEND_PID $FRONTEND_PID" EXIT
 wait
 '''
 depends = ["deps"]
+
+[tasks."chart:validate"]
+description = 'Validate Helm chart with kubeconform across Kubernetes versions'
+run = './deploy/scripts/kubeconform.sh'
+
+[tasks."chart:validate:selftest"]
+description = 'Run kubeconform self-tests'
+run = './deploy/scripts/kubeconform-selftest.sh'
