@@ -167,7 +167,7 @@ jobs:
 
       - name: Create Distr Version
         id: distr-create-version
-        uses: distr-sh/distr-create-version-action@v1.4.1
+        uses: distr-sh/distr-create-version-action@v1.5.0
         with:
           api-token: ${{ secrets[matrix.DISTR_TOKEN_SECRET] }}
           api-base: "https://demo.distr.sh/api/v1"
@@ -180,4 +180,44 @@ jobs:
 
       - name: Print Application Version ID
         id: output
+        run: echo "${{ steps.distr-create-version.outputs.created-version-id }}"
+
+  distr-kubernetes:
+    name: Update Kubernetes deployments
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [build-chart, compatibility-matrix-report]
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Download compatibility matrix report
+        uses: actions/download-artifact@v4
+        with:
+          name: compatibility-matrix-report
+          path: ${{ github.workspace }}/artifacts
+
+      - name: Create Distr Version
+        id: distr-create-version
+        uses: distr-sh/distr-create-version-action@v1.5.0
+        with:
+          api-token: ${{ secrets.DISTR_TOKEN }}
+          api-base: "https://demo.distr.sh/api/v1"
+          application-id: ${{ vars.HELLO_DISTR_HELM_APPLICATION_ID }}
+          version-name: ${{ github.ref_name }}
+          chart-type: oci
+          chart-url: oci://ghcr.io/distr-sh/charts/hello-distr
+          chart-version: ${{ github.ref_name }}
+          base-values-file: ${{ github.workspace }}/deploy/charts/hello-distr/values.yaml
+          resources: |
+            [
+              {
+                "name": "compatibility-matrix.md",
+                "path": "${{ github.workspace }}/artifacts/compatibility-matrix.md",
+                "visibleToCustomers": true
+              }
+            ]
+
+      - name: Print Application Version ID
         run: echo "${{ steps.distr-create-version.outputs.created-version-id }}"
