@@ -1,8 +1,8 @@
 # hello-distr
 
 This is a web application to demonstrate the build, deployment and release workflow for applications in Distr.
-It consists of a Next.js frontend, a Python backend, a job scheduler and a PostgreSQL database. 
-The containers are deployed via Docker Compose (or Helm for Kubernetes) behind a Caddy reverse proxy, 
+It consists of a Next.js frontend, a Python backend, a job scheduler and a PostgreSQL database.
+The containers are deployed via Docker Compose (or Helm for Kubernetes) behind a Caddy reverse proxy,
 allowing access to the frontend and the Python API.
 
 Feel free to fork it, tinker around a bit and find out what Distr can offer for your on premises software. 
@@ -167,7 +167,7 @@ The UI consists of only one page showing the deployed version and the latest ent
 To demonstrate that the API is also publicly available, you can `POST` a newer message to it:
 
 ```shell
-curl -X POST http://<your-hostname>/api/messages -d '{"text": "hello distr lol"}'  -H 'Content-Type: application/json'
+curl -X POST <protocol>://<your-hostname>/api/messages -d '{"text": "hello distr lol"}'  -H 'Content-Type: application/json'
 ```
 
 After refreshing the UI, it should display the newly added message. 
