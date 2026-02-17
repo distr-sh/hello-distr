@@ -1,2 +1,5 @@
 .idea
 deploy/charts/*/charts/
+compatibility-matrix.md
+compatibility-matrix-*.md
+kubeconform-*.json
