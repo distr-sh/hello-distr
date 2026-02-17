@@ -18,15 +18,15 @@ We make use of:
 
 ## Repository Structure
 
-Apart from a directory for the code, config and `Dockerfile` of each the applications' components (`backend`, `frontend`, `proxy`, `jobs`), 
+Apart from a directory for the code, config and `Dockerfile` for each application component (`backend`, `frontend`, `proxy`, `jobs`), 
 there are the following deployment specific files/directories:
 
 * `.github/workflows/hello-distr.yaml`: The main CI/CD workflow — builds all services, builds and validates the Helm chart, and pushes versions to Distr.
 * `.github/workflows/release-please.yaml`: The Release Please workflow for automated releases.
 * `deploy/`: Contains the [production Docker Compose file](deploy/docker-compose.yaml), an [environment template](deploy/env.template), 
-a [Helm chart](deploy/charts/hello-distr/) and [CI scripts](deploy/scripts/) for Helm chart validation.
-These will be uploaded to Distr using the [`distr-create-version-action`](https://github.com/distr-sh/distr-create-version-action), 
-as defined in the [hello-distr workflow](.github/workflows/hello-distr.yaml).
+  a [Helm chart](deploy/charts/hello-distr/) and [CI scripts](deploy/scripts/) for Helm chart validation.
+  These will be uploaded to Distr using the [`distr-create-version-action`](https://github.com/distr-sh/distr-create-version-action), 
+  as defined in the [hello-distr workflow](.github/workflows/hello-distr.yaml).
 * `release-please-config.json`: Contains the config for the Release Please action.
 
 ## How it works
@@ -92,7 +92,7 @@ you should remove this line to use the default Distr Hub (`app.distr.sh`) instea
 
 On release, the `distr-kubernetes` job uploads the Helm chart reference and base values to the Distr Hub.
 This works similarly to the Docker path, but uses a Distr application of type `kubernetes` instead. 
-The Helm chart is pushed as an OCI artifact to `ghcr.io/distr-sh/charts`, and the compatibility matrix report 
+The Helm chart is pushed as an OCI artifact to `oci://ghcr.io/distr-sh/charts/hello-distr`, and the compatibility matrix report 
 is attached as a visible resource so customers can see which Kubernetes versions were validated.
 
 Follow the same one-time setup steps as for Docker, but:
@@ -150,9 +150,9 @@ to a newer version, the deploy modal in the Distr web interface will show the pr
 
 You can use this template to set recommended values and to leave additional comments. 
 
-The required environment variables are:
+The configuration environment variables are:
 * `HELLO_DISTR_HOST`: The hostname (without scheme or path) where the app will be reachable.
-* `HELLO_DISTR_PROTOCOL`: `http` or `https` (defaults to `http`).
+* `HELLO_DISTR_PROTOCOL`: `http` or `https` (optional, defaults to `http` if not set).
 * `HELLO_DISTR_DB_NAME`: The PostgreSQL database name.
 * `HELLO_DISTR_DB_USER`: The PostgreSQL user.
 * `HELLO_DISTR_DB_PASSWORD`: The PostgreSQL password.
