@@ -1,5 +1,43 @@
 # Changelog
 
+## [0.4.2](https://github.com/distr-sh/hello-distr/compare/0.4.1...0.4.2) (2026-02-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @heroui/button to v2.2.31 ([#608](https://github.com/distr-sh/hello-distr/issues/608)) ([a12d3d8](https://github.com/distr-sh/hello-distr/commit/a12d3d8a76accd0a12160296232aa0413b879a5a))
+* **deps:** update dependency @heroui/code to v2.2.24 ([#609](https://github.com/distr-sh/hello-distr/issues/609)) ([62800ac](https://github.com/distr-sh/hello-distr/commit/62800ac669212d10385930943632d98caca1d100))
+* **deps:** update dependency @heroui/input to v2.4.32 ([#610](https://github.com/distr-sh/hello-distr/issues/610)) ([e264031](https://github.com/distr-sh/hello-distr/commit/e2640310e3dd2ef5621de28732fe88f4164c40c6))
+* **deps:** update dependency @heroui/kbd to v2.2.25 ([#611](https://github.com/distr-sh/hello-distr/issues/611)) ([5bc8670](https://github.com/distr-sh/hello-distr/commit/5bc86704b189f5a31794f8a78a37cb5a9a6c555b))
+* **deps:** update dependency @heroui/listbox to v2.3.30 ([#612](https://github.com/distr-sh/hello-distr/issues/612)) ([71f5bee](https://github.com/distr-sh/hello-distr/commit/71f5bee0499fdefbec2d1c3fe8897efc3e306990))
+* **deps:** update dependency @heroui/navbar to v2.2.29 ([#613](https://github.com/distr-sh/hello-distr/issues/613)) ([fad11ad](https://github.com/distr-sh/hello-distr/commit/fad11ad0443334ef040e6e2f888a62caf4606ff6))
+* **deps:** update dependency @heroui/snippet to v2.2.32 ([#614](https://github.com/distr-sh/hello-distr/issues/614)) ([2d4eff0](https://github.com/distr-sh/hello-distr/commit/2d4eff0cbae4693cbe1fac96a095338e9e59cb26))
+* **deps:** update dependency @heroui/system to v2.4.27 ([#615](https://github.com/distr-sh/hello-distr/issues/615)) ([08389b3](https://github.com/distr-sh/hello-distr/commit/08389b321665934b929d84ff0b44e618167565bc))
+* **deps:** update dependency framer-motion to v12.33.0 ([#595](https://github.com/distr-sh/hello-distr/issues/595)) ([e04139e](https://github.com/distr-sh/hello-distr/commit/e04139e225d0a16d181b1db7a4d310794effbd84))
+* **deps:** update dependency framer-motion to v12.34.0 ([#602](https://github.com/distr-sh/hello-distr/issues/602)) ([58a5b07](https://github.com/distr-sh/hello-distr/commit/58a5b07c6b770da5620095d0e5bbeeb9d5fc091e))
+* **deps:** update react-spectrum monorepo ([#592](https://github.com/distr-sh/hello-distr/issues/592)) ([0725a2c](https://github.com/distr-sh/hello-distr/commit/0725a2cf2a60ef76ff4896e4b4ceafe9c487eda6))
+
+
+### Other
+
+* add Helm Chart ([#618](https://github.com/distr-sh/hello-distr/issues/618)) ([42d52b8](https://github.com/distr-sh/hello-distr/commit/42d52b86adedd78b575b0cb1796b50493cf4b6b4))
+* **deps:** update dependency @playwright/test to v1.58.2 ([#598](https://github.com/distr-sh/hello-distr/issues/598)) ([648ce08](https://github.com/distr-sh/hello-distr/commit/648ce08fbbdb82cfbf81358b4313abb0d4dea2ae))
+* **deps:** update dependency @types/node to v25.2.1 ([#597](https://github.com/distr-sh/hello-distr/issues/597)) ([b5a2909](https://github.com/distr-sh/hello-distr/commit/b5a29098d40072ade9a8d937ca3209baadc2c09d))
+* **deps:** update dependency @types/node to v25.2.2 ([#600](https://github.com/distr-sh/hello-distr/issues/600)) ([2173212](https://github.com/distr-sh/hello-distr/commit/2173212106cd6c41425efd9c3a87ac2cc31fd40e))
+* **deps:** update dependency @types/node to v25.2.3 ([#604](https://github.com/distr-sh/hello-distr/issues/604)) ([36a1e46](https://github.com/distr-sh/hello-distr/commit/36a1e4617211e29748fb1f9072c5f9b0e6ab4284))
+* **deps:** update dependency @types/react to v19.2.11 ([#593](https://github.com/distr-sh/hello-distr/issues/593)) ([cca17ea](https://github.com/distr-sh/hello-distr/commit/cca17ea10ee43abfcd59cc357ec98133c9df1278))
+* **deps:** update dependency @types/react to v19.2.13 ([#596](https://github.com/distr-sh/hello-distr/issues/596)) ([3566b6f](https://github.com/distr-sh/hello-distr/commit/3566b6f4963c445b05a6d564ab7ac5dbf9908f8a))
+* **deps:** update dependency @types/react to v19.2.14 ([#605](https://github.com/distr-sh/hello-distr/issues/605)) ([8b27e0c](https://github.com/distr-sh/hello-distr/commit/8b27e0c31491a3bd838f98921abf9d972f19bce0))
+* **deps:** update dependency eslint-plugin-n to v17.24.0 ([#616](https://github.com/distr-sh/hello-distr/issues/616)) ([5fa7c00](https://github.com/distr-sh/hello-distr/commit/5fa7c0024c2e57974d79e8b939aeb7ccf8c2d878))
+* **deps:** update dependency eslint-plugin-unused-imports to v4.4.1 ([#601](https://github.com/distr-sh/hello-distr/issues/601)) ([cfce8a6](https://github.com/distr-sh/hello-distr/commit/cfce8a6afc6c2e319cad6740ed7ed7d862ad224d))
+* **deps:** update dependency python to v3.14.3 ([#591](https://github.com/distr-sh/hello-distr/issues/591)) ([882cedb](https://github.com/distr-sh/hello-distr/commit/882cedbde8bef83cb666924224367d62ff566ff1))
+* **deps:** update dependency tailwind-merge to v3.4.1 ([#617](https://github.com/distr-sh/hello-distr/issues/617)) ([e06214c](https://github.com/distr-sh/hello-distr/commit/e06214c8ac92d7f4631d44d2d0a13ee677c9e6c7))
+* **deps:** update docker/build-push-action action to v6.19.1 ([#606](https://github.com/distr-sh/hello-distr/issues/606)) ([43c2aa1](https://github.com/distr-sh/hello-distr/commit/43c2aa18e6b971b170f3ee39e4fc73f4e8319719))
+* **deps:** update docker/build-push-action action to v6.19.2 ([#607](https://github.com/distr-sh/hello-distr/issues/607)) ([98b97c2](https://github.com/distr-sh/hello-distr/commit/98b97c297798a2069dc8ee47740cb0601ecc5433))
+* **deps:** update typescript-eslint monorepo to v8.55.0 ([#603](https://github.com/distr-sh/hello-distr/issues/603)) ([7aa238a](https://github.com/distr-sh/hello-distr/commit/7aa238aa57898adb6063825333a9b2f8f4765f90))
+* **deps:** update typescript-eslint monorepo to v8.56.0 ([#620](https://github.com/distr-sh/hello-distr/issues/620)) ([a43ba8d](https://github.com/distr-sh/hello-distr/commit/a43ba8df7f0a79c69ecd340722aae573daf75a53))
+* remove subchart ([18107a0](https://github.com/distr-sh/hello-distr/commit/18107a0495384930ea59c412e0fd60edd9e2b4f7))
+
 ## [0.4.1](https://github.com/distr-sh/hello-distr/compare/0.4.0...0.4.1) (2026-02-03)
 
 
