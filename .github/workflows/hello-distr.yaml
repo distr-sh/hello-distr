@@ -116,7 +116,7 @@ jobs:
         run: cat "compatibility-matrix-${{ matrix.kubernetes-version }}.md" >> "$GITHUB_STEP_SUMMARY"
       - name: Upload report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: compatibility-matrix-${{ matrix.kubernetes-version }}
           path: |
@@ -132,7 +132,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Download all reports
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           pattern: compatibility-matrix-*
           path: reports
@@ -142,7 +142,7 @@ jobs:
       - name: Write job summary
         run: cat compatibility-matrix.md >> "$GITHUB_STEP_SUMMARY"
       - name: Upload unified report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: compatibility-matrix-report
           path: compatibility-matrix.md
@@ -193,7 +193,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Download compatibility matrix report
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: compatibility-matrix-report
           path: ${{ github.workspace }}/artifacts
