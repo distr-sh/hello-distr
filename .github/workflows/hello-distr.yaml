@@ -147,10 +147,58 @@ jobs:
           name: compatibility-matrix-report
           path: compatibility-matrix.md
 
+  vulnerability-scan:
+    name: Vulnerability Scan
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Install osv-scanner
+        uses: jaxxstorm/action-install-gh-release@v2.1.0
+        with:
+          repo: google/osv-scanner
+          tag: v2.3.3
+          cache: enable
+      - name: Login to GitHub Container Registry
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3.7.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull container images
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        run: |
+          for service in backend frontend proxy jobs; do
+            docker pull "ghcr.io/distr-sh/hello-distr/${service}:${{ github.ref_name }}"
+          done
+      - name: Run vulnerability scan
+        run: |
+          if [[ "${{ github.ref }}" == refs/tags/* ]]; then
+            ./deploy/scripts/distr-vulnerability-scan.sh ci "${{ github.ref_name }}"
+          else
+            ./deploy/scripts/distr-vulnerability-scan.sh
+          fi
+      - name: Write job summary
+        if: always()
+        run: cat vulnerability-scan.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: vulnerability-scan-report
+          path: |
+            vulnerability-scan.md
+            vulnerability-scan.json
+
   distr-docker:
     name: Update Docker deployments
     if: startsWith(github.ref, 'refs/tags/')
-    needs: build
+    needs: [build, vulnerability-scan]
     strategy:
       matrix:
         include:
@@ -165,6 +213,12 @@ jobs:
         id: checkout
         uses: actions/checkout@v6
 
+      - name: Download vulnerability scan report
+        uses: actions/download-artifact@v7
+        with:
+          name: vulnerability-scan-report
+          path: ${{ github.workspace }}/artifacts
+
       - name: Create Distr Version
         id: distr-create-version
         uses: distr-sh/distr-create-version-action@v1.5.0
@@ -177,6 +231,14 @@ jobs:
           template-file: ${{ github.workspace }}/deploy/env.template
           link-template: "{{ .Env.HELLO_DISTR_PROTOCOL }}://{{ .Env.HELLO_DISTR_HOST }}"
           update-deployments: true
+          resources: |
+            [
+              {
+                "name": "vulnerability-scan.md",
+                "path": "${{ github.workspace }}/artifacts/vulnerability-scan.md",
+                "visibleToCustomers": true
+              }
+            ]
 
       - name: Print Application Version ID
         id: output
@@ -185,7 +247,7 @@ jobs:
   distr-kubernetes:
     name: Update Kubernetes deployments
     if: startsWith(github.ref, 'refs/tags/')
-    needs: [build-chart, compatibility-matrix-report]
+    needs: [build-chart, compatibility-matrix-report, vulnerability-scan]
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
@@ -196,6 +258,12 @@ jobs:
         uses: actions/download-artifact@v7
         with:
           name: compatibility-matrix-report
+          path: ${{ github.workspace }}/artifacts
+
+      - name: Download vulnerability scan report
+        uses: actions/download-artifact@v7
+        with:
+          name: vulnerability-scan-report
           path: ${{ github.workspace }}/artifacts
 
       - name: Create Distr Version
@@ -215,6 +283,11 @@ jobs:
               {
                 "name": "compatibility-matrix.md",
                 "path": "${{ github.workspace }}/artifacts/compatibility-matrix.md",
+                "visibleToCustomers": true
+              },
+              {
+                "name": "vulnerability-scan.md",
+                "path": "${{ github.workspace }}/artifacts/vulnerability-scan.md",
                 "visibleToCustomers": true
               }
             ]

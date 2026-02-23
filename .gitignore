@@ -3,3 +3,6 @@ deploy/charts/*/charts/
 compatibility-matrix.md
 compatibility-matrix-*.md
 kubeconform-*.json
+vulnerability-scan.md
+vulnerability-scan.json
+vulnerability-scan-*.json
