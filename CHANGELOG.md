@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.4.3](https://github.com/distr-sh/hello-distr/compare/0.4.2...0.4.3) (2026-02-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.34.1 ([#621](https://github.com/distr-sh/hello-distr/issues/621)) ([4de9b98](https://github.com/distr-sh/hello-distr/commit/4de9b980ed2eff0f39ee253f3c1ad99169fab608))
+* **deps:** update dependency framer-motion to v12.34.2 ([#626](https://github.com/distr-sh/hello-distr/issues/626)) ([5bfe50b](https://github.com/distr-sh/hello-distr/commit/5bfe50b06db35af5862b21f9810399c0c2912790))
+* **deps:** update dependency framer-motion to v12.34.3 ([#630](https://github.com/distr-sh/hello-distr/issues/630)) ([239c864](https://github.com/distr-sh/hello-distr/commit/239c8648e76b94bc8a5b077557c71f69b8e6ca6a))
+
+
+### Other
+
+* **deps:** update dependency @types/node to v25.3.0 ([#628](https://github.com/distr-sh/hello-distr/issues/628)) ([52b8041](https://github.com/distr-sh/hello-distr/commit/52b804145a3a3fe8415cfaff0247d2223d109ce6))
+* **deps:** update dependency tailwind-merge to v3.5.0 ([#629](https://github.com/distr-sh/hello-distr/issues/629)) ([9c98c40](https://github.com/distr-sh/hello-distr/commit/9c98c4097fe5f4418e4b81c481f1f34e2baf944e))
+* **deps:** update eslint monorepo to v9.39.3 ([#631](https://github.com/distr-sh/hello-distr/issues/631)) ([6b9daf0](https://github.com/distr-sh/hello-distr/commit/6b9daf0e80e268f1a8aa7a78f51bfff8f58e0019))
+* **deps:** update github artifact actions (major) ([#625](https://github.com/distr-sh/hello-distr/issues/625)) ([e56f9dc](https://github.com/distr-sh/hello-distr/commit/e56f9dcad3367bee9f32d7b3f606c93b5dd6a9fd))
+* **deps:** update tailwindcss monorepo to v4.2.0 ([#627](https://github.com/distr-sh/hello-distr/issues/627)) ([a39668d](https://github.com/distr-sh/hello-distr/commit/a39668dc7fdd8cd012a9ef98d5e4311391247772))
+
+
+### Docs
+
+* update README ([#623](https://github.com/distr-sh/hello-distr/issues/623)) ([b2da2fe](https://github.com/distr-sh/hello-distr/commit/b2da2fe907ff126b00c39e2baeec34d76e08c9f8))
+
 ## [0.4.2](https://github.com/distr-sh/hello-distr/compare/0.4.1...0.4.2) (2026-02-17)
 
 
