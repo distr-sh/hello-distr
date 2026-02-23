@@ -2,6 +2,7 @@
 node = "24"
 python = "3.14.3"
 kubeconform = "0.7.0"
+osv-scanner = "2.3.3"
 
 [env]
 _.file = ['backend/.env.development']
@@ -80,3 +81,7 @@ run = './deploy/scripts/distr-compatibility-matrix.sh'
 [tasks."chart:validate:selftest"]
 description = 'Run kubeconform self-tests'
 run = './deploy/scripts/distr-compatibility-matrix-selftest.sh'
+
+[tasks."vulnerability:scan"]
+description = 'Scan dependencies for known vulnerabilities using osv-scanner'
+run = './deploy/scripts/distr-vulnerability-scan.sh'
