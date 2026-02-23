@@ -158,11 +158,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Install osv-scanner
-        uses: jaxxstorm/action-install-gh-release@v2.1.0
-        with:
-          repo: google/osv-scanner
-          tag: v2.3.3
-          cache: enable
+        env:
+          OSV_SCANNER_VERSION: "2.3.3"
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download "v${OSV_SCANNER_VERSION}" \
+            --repo google/osv-scanner \
+            --pattern 'osv-scanner_linux_amd64' \
+            --dir /usr/local/bin
+          mv /usr/local/bin/osv-scanner_linux_amd64 /usr/local/bin/osv-scanner
+          chmod +x /usr/local/bin/osv-scanner
+          osv-scanner --version
       - name: Login to GitHub Container Registry
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
         uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3.7.0
