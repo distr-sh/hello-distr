@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.4](https://github.com/distr-sh/hello-distr/compare/0.4.3...0.4.4) (2026-03-02)
+
+
+### Other
+
+* **deps:** update dependency @eslint/eslintrc to v3.3.4 ([#636](https://github.com/distr-sh/hello-distr/issues/636)) ([33ea2a4](https://github.com/distr-sh/hello-distr/commit/33ea2a439a14a5e92053b69c7b2abc1f18ebc8b1))
+* **deps:** update dependency @types/node to v25.3.1 ([#639](https://github.com/distr-sh/hello-distr/issues/639)) ([23f836e](https://github.com/distr-sh/hello-distr/commit/23f836eda24a86e89b6b6d322dc260fdef9b1431))
+* **deps:** update dependency @types/node to v25.3.2 ([#640](https://github.com/distr-sh/hello-distr/issues/640)) ([bd4f1e5](https://github.com/distr-sh/hello-distr/commit/bd4f1e5d2ad37b7eb50b2eb2acd19c51e1aa7643))
+* **deps:** update dependency @types/node to v25.3.3 ([#643](https://github.com/distr-sh/hello-distr/issues/643)) ([b7685db](https://github.com/distr-sh/hello-distr/commit/b7685db64784a5848154f45410e57386375be6b1))
+* **deps:** update dependency autoprefixer to v10.4.27 ([#638](https://github.com/distr-sh/hello-distr/issues/638)) ([8fd0553](https://github.com/distr-sh/hello-distr/commit/8fd0553f538fe7b1a78a351d7b48601f883241ed))
+* **deps:** update dependency python-dotenv to v1.2.2 ([#644](https://github.com/distr-sh/hello-distr/issues/644)) ([d0b151a](https://github.com/distr-sh/hello-distr/commit/d0b151af09318ccf0b9264587db93abffa07c026))
+* **deps:** update github artifact actions (major) ([#641](https://github.com/distr-sh/hello-distr/issues/641)) ([b6646d3](https://github.com/distr-sh/hello-distr/commit/b6646d38d04f8b1a51088d68acdd0f71e0022020))
+* **deps:** update tailwindcss monorepo to v4.2.1 ([#633](https://github.com/distr-sh/hello-distr/issues/633)) ([308cee0](https://github.com/distr-sh/hello-distr/commit/308cee0ec455e5b5ee2594d69a0fc7d601f4f3b5))
+* **deps:** update typescript-eslint monorepo to v8.56.1 ([#634](https://github.com/distr-sh/hello-distr/issues/634)) ([74a787e](https://github.com/distr-sh/hello-distr/commit/74a787edd48231c8e346d36806b580e5c80f63d1))
+
 ## [0.4.3](https://github.com/distr-sh/hello-distr/compare/0.4.2...0.4.3) (2026-02-23)
 
 
