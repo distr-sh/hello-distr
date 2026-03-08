@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.4.4](https://github.com/distr-sh/hello-distr/compare/0.4.3...0.4.4) (2026-03-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @heroui/button to v2.2.32 ([#657](https://github.com/distr-sh/hello-distr/issues/657)) ([4f8ef7e](https://github.com/distr-sh/hello-distr/commit/4f8ef7ef5a2c9e16e83fc61f6b87b29a8d647d4d))
+* **deps:** update dependency @heroui/code to v2.2.25 ([#658](https://github.com/distr-sh/hello-distr/issues/658)) ([07a9400](https://github.com/distr-sh/hello-distr/commit/07a94004e18405d8718bd3c91d1a95fc26368ee7))
+* **deps:** update dependency framer-motion to v12.34.4 ([#645](https://github.com/distr-sh/hello-distr/issues/645)) ([e9333dc](https://github.com/distr-sh/hello-distr/commit/e9333dc8c186216b6faec18252c27707f72b179f))
+* **deps:** update dependency framer-motion to v12.34.5 ([#647](https://github.com/distr-sh/hello-distr/issues/647)) ([25580f8](https://github.com/distr-sh/hello-distr/commit/25580f8d87979cdd17eb686b72ca2d8f4ef0bbbe))
+* **deps:** update dependency framer-motion to v12.35.0 ([#648](https://github.com/distr-sh/hello-distr/issues/648)) ([108dbca](https://github.com/distr-sh/hello-distr/commit/108dbca8a4d42946f710a65ff79165d8cef0c013))
+* **deps:** update react-spectrum monorepo ([#650](https://github.com/distr-sh/hello-distr/issues/650)) ([e16f584](https://github.com/distr-sh/hello-distr/commit/e16f584cce3b562ee5bddf6708779b563cde4469))
+
+
+### Other
+
+* **deps:** update dependency @eslint/eslintrc to v3.3.4 ([#636](https://github.com/distr-sh/hello-distr/issues/636)) ([33ea2a4](https://github.com/distr-sh/hello-distr/commit/33ea2a439a14a5e92053b69c7b2abc1f18ebc8b1))
+* **deps:** update dependency @eslint/eslintrc to v3.3.5 ([#655](https://github.com/distr-sh/hello-distr/issues/655)) ([07fdd31](https://github.com/distr-sh/hello-distr/commit/07fdd31ef4cd53adddf4adc6aca12508e8359e07))
+* **deps:** update dependency @types/node to v25.3.1 ([#639](https://github.com/distr-sh/hello-distr/issues/639)) ([23f836e](https://github.com/distr-sh/hello-distr/commit/23f836eda24a86e89b6b6d322dc260fdef9b1431))
+* **deps:** update dependency @types/node to v25.3.2 ([#640](https://github.com/distr-sh/hello-distr/issues/640)) ([bd4f1e5](https://github.com/distr-sh/hello-distr/commit/bd4f1e5d2ad37b7eb50b2eb2acd19c51e1aa7643))
+* **deps:** update dependency @types/node to v25.3.3 ([#643](https://github.com/distr-sh/hello-distr/issues/643)) ([b7685db](https://github.com/distr-sh/hello-distr/commit/b7685db64784a5848154f45410e57386375be6b1))
+* **deps:** update dependency @types/node to v25.3.5 ([#653](https://github.com/distr-sh/hello-distr/issues/653)) ([082e7f0](https://github.com/distr-sh/hello-distr/commit/082e7f075f8171fc93bb85b31daab96a5ee30eef))
+* **deps:** update dependency autoprefixer to v10.4.27 ([#638](https://github.com/distr-sh/hello-distr/issues/638)) ([8fd0553](https://github.com/distr-sh/hello-distr/commit/8fd0553f538fe7b1a78a351d7b48601f883241ed))
+* **deps:** update dependency postcss to v8.5.8 ([#646](https://github.com/distr-sh/hello-distr/issues/646)) ([efc9a5d](https://github.com/distr-sh/hello-distr/commit/efc9a5d514d2f26f591ecdc249c3f59830479815))
+* **deps:** update dependency python-dotenv to v1.2.2 ([#644](https://github.com/distr-sh/hello-distr/issues/644)) ([d0b151a](https://github.com/distr-sh/hello-distr/commit/d0b151af09318ccf0b9264587db93abffa07c026))
+* **deps:** update docker/build-push-action action to v7 ([#654](https://github.com/distr-sh/hello-distr/issues/654)) ([b7371bf](https://github.com/distr-sh/hello-distr/commit/b7371bfe7f019fda726b273397dd2bd7f4cf179a))
+* **deps:** update docker/login-action action to v4 ([#649](https://github.com/distr-sh/hello-distr/issues/649)) ([857cc35](https://github.com/distr-sh/hello-distr/commit/857cc3569042abe64b0892ded33cf0cb3dd9f4d7))
+* **deps:** update docker/metadata-action action to v6 ([#652](https://github.com/distr-sh/hello-distr/issues/652)) ([32d6c35](https://github.com/distr-sh/hello-distr/commit/32d6c35f4302e68172b88e4f6ff0bdc0ef423022))
+* **deps:** update docker/setup-buildx-action action to v4 ([#651](https://github.com/distr-sh/hello-distr/issues/651)) ([1f13251](https://github.com/distr-sh/hello-distr/commit/1f13251f40b9c0cd03efe78f04b92c2ee594627f))
+* **deps:** update eslint monorepo to v9.39.4 ([#656](https://github.com/distr-sh/hello-distr/issues/656)) ([1a20523](https://github.com/distr-sh/hello-distr/commit/1a2052323fddbf3de3848f97a927971fa5c9eb49))
+* **deps:** update github artifact actions (major) ([#641](https://github.com/distr-sh/hello-distr/issues/641)) ([b6646d3](https://github.com/distr-sh/hello-distr/commit/b6646d38d04f8b1a51088d68acdd0f71e0022020))
+* **deps:** update tailwindcss monorepo to v4.2.1 ([#633](https://github.com/distr-sh/hello-distr/issues/633)) ([308cee0](https://github.com/distr-sh/hello-distr/commit/308cee0ec455e5b5ee2594d69a0fc7d601f4f3b5))
+* **deps:** update typescript-eslint monorepo to v8.56.1 ([#634](https://github.com/distr-sh/hello-distr/issues/634)) ([74a787e](https://github.com/distr-sh/hello-distr/commit/74a787edd48231c8e346d36806b580e5c80f63d1))
+
 ## [0.4.3](https://github.com/distr-sh/hello-distr/compare/0.4.2...0.4.3) (2026-02-23)
 
 
