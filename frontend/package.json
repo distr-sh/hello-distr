@@ -59,7 +59,7 @@
     "postcss": "8.5.8",
     "prettier": "3.8.1",
     "tailwind-variants": "3.2.2",
-    "tailwindcss": "4.2.1",
+    "tailwindcss": "4.2.2",
     "typescript": "5.9.3"
   }
 }
