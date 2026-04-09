@@ -1,4 +1,4 @@
-{$HOST} {
+{$HELLO_DISTR_PROTOCOL}://{$HOST} {
 	log stderr
 	handle_path /api/* {
 		reverse_proxy backend:5000
