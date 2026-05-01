@@ -2,7 +2,7 @@
 node = "24"
 python = "3.14.3"
 kubeconform = "0.7.0"
-osv-scanner = "2.3.3"
+osv-scanner = "2.3.6"
 
 [env]
 _.file = ['backend/.env.development']
