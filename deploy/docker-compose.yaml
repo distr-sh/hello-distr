@@ -7,9 +7,16 @@ x-shared-env: &shared-env
   HELLO_DISTR_PROTOCOL: ${HELLO_DISTR_PROTOCOL:-http}
   HELLO_DISTR_DB_NAME: ${HELLO_DISTR_DB_NAME:?error}
 
+x-default-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
 services:
   postgres:
     image: "postgres:18.3-alpine3.23"
+    logging: *default-logging
     environment:
       <<: *shared-env
       POSTGRES_USER: ${HELLO_DISTR_DB_USER:?error}
@@ -25,6 +32,7 @@ services:
 
   backend:
     image: ghcr.io/distr-sh/hello-distr/backend:0.4.4 # x-release-please-version
+    logging: *default-logging
     environment:
       <<: *shared-env
       DB_URL: postgresql://${HELLO_DISTR_DB_USER:?error}:${HELLO_DISTR_DB_PASSWORD:?error}@postgres/${HELLO_DISTR_DB_NAME:?error}?sslmode=disable
@@ -45,6 +53,7 @@ services:
 
   frontend:
     image: ghcr.io/distr-sh/hello-distr/frontend:0.4.4 # x-release-please-version
+    logging: *default-logging
     environment:
       <<: *shared-env
       NEXT_PUBLIC_API_URL: "${HELLO_DISTR_PROTOCOL:-http}://${HELLO_DISTR_HOST:?error}/api"
@@ -61,6 +70,7 @@ services:
 
   proxy:
     image: ghcr.io/distr-sh/hello-distr/proxy:0.4.4 # x-release-please-version
+    logging: *default-logging
     environment:
       <<: *shared-env
       HOST: ${HELLO_DISTR_HOST:?error}
@@ -80,6 +90,7 @@ services:
 
   jobs:
     image: ghcr.io/distr-sh/hello-distr/jobs:0.4.4 # x-release-please-version
+    logging: *default-logging
     depends_on:
       backend:
         condition: service_healthy
