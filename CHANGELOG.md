@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.6](https://github.com/distr-sh/hello-distr/compare/0.4.5...0.4.6) (2026-06-12)
+
+
+### Other
+
+* **deps:** update tailwindcss monorepo to v4.3.1 ([#771](https://github.com/distr-sh/hello-distr/issues/771)) ([a6643da](https://github.com/distr-sh/hello-distr/commit/a6643daf045ddf3b780ceb3adc0b4c1cfd0c17bb))
+
 ## [0.4.5](https://github.com/distr-sh/hello-distr/compare/0.4.4...0.4.5) (2026-06-12)
 
 
