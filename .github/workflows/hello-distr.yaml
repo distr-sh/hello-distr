@@ -113,7 +113,7 @@ jobs:
 
       - name: Create Zarf package
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        run: zarf package create deploy/zarf --set VERSION=${{ github.ref_name }} --confirm
+        run: zarf package create deploy/zarf --set VERSION="${{ github.ref_name }}" --confirm
 
       - name: Publish Zarf package to Distr registry
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
