@@ -1,5 +1,42 @@
 # Changelog
 
+## [0.4.6](https://github.com/distr-sh/hello-distr/compare/0.4.5...0.4.6) (2026-07-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.41.0 ([#781](https://github.com/distr-sh/hello-distr/issues/781)) ([4578733](https://github.com/distr-sh/hello-distr/commit/45787336a3fed3cb91a38c14d3baa06a3b43211a))
+* **deps:** update dependency framer-motion to v12.42.0 ([#787](https://github.com/distr-sh/hello-distr/issues/787)) ([d70810e](https://github.com/distr-sh/hello-distr/commit/d70810e454ecfed95f13178a48ab3e643f404e8a))
+* **deps:** update dependency framer-motion to v12.42.1 ([#799](https://github.com/distr-sh/hello-distr/issues/799)) ([624a586](https://github.com/distr-sh/hello-distr/commit/624a5860f301d585dd32a5c329da868542d21e29))
+* **deps:** update dependency framer-motion to v12.42.2 ([#800](https://github.com/distr-sh/hello-distr/issues/800)) ([098814c](https://github.com/distr-sh/hello-distr/commit/098814c4e7c3c723aace21bb1d61df4d8e78ec0f))
+
+
+### Other
+
+* **deps:** update actions/checkout action to v7 ([#778](https://github.com/distr-sh/hello-distr/issues/778)) ([8523b37](https://github.com/distr-sh/hello-distr/commit/8523b37d881a21e4b2641d78e3153defa9792ae4))
+* **deps:** update azure/setup-helm action to v5.0.1 ([#782](https://github.com/distr-sh/hello-distr/issues/782)) ([06b638b](https://github.com/distr-sh/hello-distr/commit/06b638b0097bc007d159cb7b6fd1dd6c1a45e239))
+* **deps:** update dependency @types/node to v25.9.4 ([#779](https://github.com/distr-sh/hello-distr/issues/779)) ([ba79741](https://github.com/distr-sh/hello-distr/commit/ba79741d4a245e321067f9158ccbf6d2d9e05424))
+* **deps:** update dependency autoprefixer to v10.5.1 ([#783](https://github.com/distr-sh/hello-distr/issues/783)) ([18cae40](https://github.com/distr-sh/hello-distr/commit/18cae407f96784974d4b7622b9ad763b831c9760))
+* **deps:** update dependency autoprefixer to v10.5.2 ([#785](https://github.com/distr-sh/hello-distr/issues/785)) ([7fb400b](https://github.com/distr-sh/hello-distr/commit/7fb400bcc29041c7dfe3ea9cd099446796971963))
+* **deps:** update dependency eslint-plugin-n to v18.2.0 ([#786](https://github.com/distr-sh/hello-distr/issues/786)) ([fc4070a](https://github.com/distr-sh/hello-distr/commit/fc4070a5ab883811c1e67a111a1481ad51314ce0))
+* **deps:** update dependency eslint-plugin-n to v18.2.1 ([#789](https://github.com/distr-sh/hello-distr/issues/789)) ([e995ae9](https://github.com/distr-sh/hello-distr/commit/e995ae9879277749c7645f605072c420e1a7bbc9))
+* **deps:** update dependency intl-messageformat to v11.2.9 ([#788](https://github.com/distr-sh/hello-distr/issues/788)) ([ee532b3](https://github.com/distr-sh/hello-distr/commit/ee532b3e4317e098c2ac3022e6e570e3c1826e24))
+* **deps:** update dependency osv-scanner to v2.4.0 ([#776](https://github.com/distr-sh/hello-distr/issues/776)) ([801c4a9](https://github.com/distr-sh/hello-distr/commit/801c4a9df3f0fee85fedebd25c82979fc0983171))
+* **deps:** update dependency postcss to v8.5.16 ([#793](https://github.com/distr-sh/hello-distr/issues/793)) ([db7119f](https://github.com/distr-sh/hello-distr/commit/db7119f0e7a2e10a9cb876ab1bd0647668652cdf))
+* **deps:** update dependency prettier to v3.8.5 ([#790](https://github.com/distr-sh/hello-distr/issues/790)) ([09ea303](https://github.com/distr-sh/hello-distr/commit/09ea3034bbf848273d5a4da2bd3c034cb141b438))
+* **deps:** update dependency prettier to v3.9.0 ([#791](https://github.com/distr-sh/hello-distr/issues/791)) ([2824d88](https://github.com/distr-sh/hello-distr/commit/2824d88849cd31fc5f3cd446c70e8df1261591be))
+* **deps:** update dependency prettier to v3.9.1 ([#792](https://github.com/distr-sh/hello-distr/issues/792)) ([78ecf52](https://github.com/distr-sh/hello-distr/commit/78ecf52596a09e205e53441152477c774573cabb))
+* **deps:** update dependency prettier to v3.9.3 ([#794](https://github.com/distr-sh/hello-distr/issues/794)) ([c396529](https://github.com/distr-sh/hello-distr/commit/c396529e2b16778c702bd9cc4a577c11b8b9c189))
+* **deps:** update dependency prettier to v3.9.4 ([#798](https://github.com/distr-sh/hello-distr/issues/798)) ([0a46d56](https://github.com/distr-sh/hello-distr/commit/0a46d56d88f0b77731d421ac2ddda7a579c85765))
+* **deps:** update playwright monorepo ([#784](https://github.com/distr-sh/hello-distr/issues/784)) ([e747f2e](https://github.com/distr-sh/hello-distr/commit/e747f2ed7e84c178f78a4fa3e8638cc4bb1db127))
+* **deps:** update playwright monorepo to v1.61.0 ([#773](https://github.com/distr-sh/hello-distr/issues/773)) ([0c943ce](https://github.com/distr-sh/hello-distr/commit/0c943ce8570b5a93bd77297f8c0d8cb7861890a2))
+* **deps:** update react-spectrum monorepo to v3.36.0 ([#777](https://github.com/distr-sh/hello-distr/issues/777)) ([41695f0](https://github.com/distr-sh/hello-distr/commit/41695f04e1cb0f33a4ccef302e00f7270c31b079))
+* **deps:** update tailwindcss monorepo to v4.3.1 ([#771](https://github.com/distr-sh/hello-distr/issues/771)) ([a6643da](https://github.com/distr-sh/hello-distr/commit/a6643daf045ddf3b780ceb3adc0b4c1cfd0c17bb))
+* **deps:** update tailwindcss monorepo to v4.3.2 ([#795](https://github.com/distr-sh/hello-distr/issues/795)) ([099d58e](https://github.com/distr-sh/hello-distr/commit/099d58eb1be4956eb1e8ccab42da38cf86ffd535))
+* **deps:** update typescript-eslint monorepo to v8.61.1 ([#774](https://github.com/distr-sh/hello-distr/issues/774)) ([45da390](https://github.com/distr-sh/hello-distr/commit/45da390e7cb2591de6e3f3ef538ee368a99ccfee))
+* **deps:** update typescript-eslint monorepo to v8.62.0 ([#780](https://github.com/distr-sh/hello-distr/issues/780)) ([0b4c57a](https://github.com/distr-sh/hello-distr/commit/0b4c57a068ab18bcdb4f02c232a15b10cb52bdd9))
+* **deps:** update typescript-eslint monorepo to v8.62.1 ([#796](https://github.com/distr-sh/hello-distr/issues/796)) ([3647ac2](https://github.com/distr-sh/hello-distr/commit/3647ac2227cc494f3dc2cf3ecb043089c7d3b656))
+
 ## [0.4.5](https://github.com/distr-sh/hello-distr/compare/0.4.4...0.4.5) (2026-06-12)
 
 
