@@ -30,13 +30,22 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Login to Distr Registry
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        uses: docker/login-action@650006c6eb7dba73a995cc03b0b2d7f5ca915bee # v4.2.0
+        with:
+          registry: demo-registry.distr.sh
+          username: ${{ github.actor }}
+          password: ${{ secrets.DISTR_TOKEN }}
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@d7f5e7f509e45cec5c76c4d5afdd7de93d0b3df5 # v4.1.0
       - name: Generate Docker Metadata
         id: meta
         uses: docker/metadata-action@80c7e94dd9b9319bd5eb7a0e0fe9291e23a2a2e9 # v6.1.0
         with:
-          images: ghcr.io/distr-sh/hello-distr/${{ matrix.service }}
+          images: |
+            ghcr.io/distr-sh/hello-distr/${{ matrix.service }}
+            demo-registry.distr.sh/artifacts/hello-distr/${{ matrix.service }}
           tags: |
             type=ref,event=branch
             type=sha,event=branch
@@ -81,9 +90,34 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Login to Distr Registry
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        uses: docker/login-action@650006c6eb7dba73a995cc03b0b2d7f5ca915bee # v4.2.0
+        with:
+          registry: demo-registry.distr.sh
+          username: ${{ github.actor }}
+          password: ${{ secrets.DISTR_TOKEN }}
       - name: Push helm chart
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        run: helm push hello-distr-*.tgz oci://ghcr.io/distr-sh/charts
+        run: |
+          for chart in hello-distr-*.tgz; do
+            helm push "$chart" oci://ghcr.io/distr-sh/charts
+            helm push "$chart" oci://demo-registry.distr.sh/artifacts/charts
+          done
+
+      - name: Setup Zarf
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        uses: zarf-dev/setup-zarf@10e539efed02f75ec39eb8823e22a5c795f492ae # v1.0.1
+        with:
+          version: v0.80.0
+
+      - name: Create Zarf package
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        run: zarf package create deploy/zarf --set VERSION=${{ github.ref_name }} --confirm
+
+      - name: Publish Zarf package to Distr registry
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        run: zarf package publish zarf-package-hello-distr-*.tar.zst oci://demo-registry.distr.sh/artifacts
 
   validate-chart:
     name: Validate chart (k8s ${{ matrix.kubernetes-version }})

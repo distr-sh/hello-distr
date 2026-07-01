@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/zarf-dev/zarf/main/zarf.schema.json
+
+kind: ZarfPackageConfig
+metadata:
+  name: hello-distr
+  description: A sample multi-service application for the Distr platform
+  version: "###ZARF_PKG_TMPL_VERSION###"
+  url: https://github.com/distr-sh/hello-distr
+
+components:
+  - name: hello-distr
+    required: true
+    description: Deploys the Hello Distr Helm chart together with all required images
+    charts:
+      - name: hello-distr
+        namespace: hello-distr
+        localPath: ../charts/hello-distr
+    images:
+      - "ghcr.io/distr-sh/hello-distr/backend:###ZARF_PKG_TMPL_VERSION###"
+      - "ghcr.io/distr-sh/hello-distr/frontend:###ZARF_PKG_TMPL_VERSION###"
+      - "ghcr.io/distr-sh/hello-distr/proxy:###ZARF_PKG_TMPL_VERSION###"
+      - "ghcr.io/distr-sh/hello-distr/jobs:###ZARF_PKG_TMPL_VERSION###"
+      - "docker.io/bitnamilegacy/postgresql:17.6.0-debian-12-r4"
