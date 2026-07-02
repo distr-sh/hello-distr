@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.7](https://github.com/distr-sh/hello-distr/compare/0.4.6...0.4.7) (2026-07-02)
+
+
+### Bug Fixes
+
+* **deps:** update nextjs monorepo to v16.2.10 ([#802](https://github.com/distr-sh/hello-distr/issues/802)) ([e09074e](https://github.com/distr-sh/hello-distr/commit/e09074eead518793db38c419ad26ba80892295f9))
+
+
+### Other
+
+* **deps:** update docker/build-push-action action to v7.3.0 ([#803](https://github.com/distr-sh/hello-distr/issues/803)) ([b5492a6](https://github.com/distr-sh/hello-distr/commit/b5492a6206069fa8fe9546f4f3ae607c44d4a1c4))
+
 ## [0.4.6](https://github.com/distr-sh/hello-distr/compare/0.4.5...0.4.6) (2026-07-01)
 
 
