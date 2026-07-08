@@ -47,7 +47,7 @@ export default function RootLayout({
             </main>
             <footer className="w-full flex items-center justify-center py-3">
               <span className="flex items-center gap-1 text-current text-default-600">
-                hello-distr (updated) version:&nbsp;
+                hello-distr (updated - and super cool) version:&nbsp;
               </span>
               <p className="text-primary">{buildConfig.version}</p>
             </footer>
