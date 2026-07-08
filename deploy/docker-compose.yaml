@@ -31,7 +31,7 @@ services:
       - app_network
 
   backend:
-    image: registry.distr.sh/subconscious/hello-distr/backend:0.5.3 # x-release-please-version
+    image: registry.distr.sh/subconscious/hello-distr/backend:0.5.4 # x-release-please-version
     logging: *default-logging
     environment:
       <<: *shared-env
@@ -52,7 +52,7 @@ services:
       - app_network
 
   frontend:
-    image: registry.distr.sh/subconscious/hello-distr/frontend:0.5.3 # x-release-please-version
+    image: registry.distr.sh/subconscious/hello-distr/frontend:0.5.4 # x-release-please-version
     logging: *default-logging
     environment:
       <<: *shared-env
@@ -69,7 +69,7 @@ services:
       - app_network
 
   proxy:
-    image: registry.distr.sh/subconscious/hello-distr/proxy:0.5.3 # x-release-please-version
+    image: registry.distr.sh/subconscious/hello-distr/proxy:0.5.4 # x-release-please-version
     logging: *default-logging
     environment:
       <<: *shared-env
@@ -89,7 +89,7 @@ services:
       - app_network
 
   jobs:
-    image: registry.distr.sh/subconscious/hello-distr/jobs:0.5.3 # x-release-please-version
+    image: registry.distr.sh/subconscious/hello-distr/jobs:0.5.4 # x-release-please-version
     logging: *default-logging
     depends_on:
       backend:

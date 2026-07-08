@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.4](https://github.com/subconscious-systems/hello-distr/compare/0.5.3...0.5.4) (2026-07-08)
+
+
+### Bug Fixes
+
+* minor yaml config and zarf config ([8a6772b](https://github.com/subconscious-systems/hello-distr/commit/8a6772bdad13501e14a84edb4a7686e98801f92d))
+
 ## [0.5.3](https://github.com/subconscious-systems/hello-distr/compare/0.5.2...0.5.3) (2026-07-08)
 
 
