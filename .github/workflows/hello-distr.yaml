@@ -45,6 +45,8 @@ jobs:
         with:
           images: |
             registry.distr.sh/subconscious/hello-distr/${{ matrix.service }}
+          flavor: |
+            latest=false
           tags: |
             type=ref,event=branch
             type=sha,event=branch
