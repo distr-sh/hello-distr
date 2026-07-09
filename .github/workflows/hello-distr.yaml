@@ -30,6 +30,10 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      # NOTE: demo-registry.distr.sh is the registry of the Distr demo/staging
+      # environment used by this example repository. When following this as a
+      # tutorial, replace demo-registry.distr.sh with registry.distr.sh
+      # (the production Distr registry) here and everywhere else below.
       - name: Login to Distr Registry
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
         uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
@@ -43,6 +47,8 @@ jobs:
         id: meta
         uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
         with:
+          # NOTE: When following this as a tutorial, push to registry.distr.sh
+          # instead of demo-registry.distr.sh.
           images: |
             ghcr.io/distr-sh/hello-distr/${{ matrix.service }}
             demo-registry.distr.sh/artifacts/hello-distr/${{ matrix.service }}
@@ -90,6 +96,9 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      # NOTE: demo-registry.distr.sh is the Distr demo/staging registry used by
+      # this example repository. When following this as a tutorial, replace it
+      # with registry.distr.sh (the production Distr registry).
       - name: Login to Distr Registry
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
         uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
@@ -99,6 +108,8 @@ jobs:
           password: ${{ secrets.DISTR_TOKEN }}
       - name: Push helm chart
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        # NOTE: push to registry.distr.sh instead of demo-registry.distr.sh
+        # when following this as a tutorial.
         run: |
           for chart in hello-distr-*.tgz; do
             helm push "$chart" oci://ghcr.io/distr-sh/charts
@@ -126,6 +137,9 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      # NOTE: demo-registry.distr.sh is the Distr demo/staging registry used by
+      # this example repository. When following this as a tutorial, replace it
+      # with registry.distr.sh (the production Distr registry).
       - name: Login to Distr Registry
         uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
         with:
@@ -138,6 +152,8 @@ jobs:
           version: v0.80.0
       - name: Create Zarf package
         run: zarf package create deploy/zarf --set VERSION="${{ github.ref_name }}" --confirm
+      # NOTE: publish to registry.distr.sh instead of demo-registry.distr.sh
+      # when following this as a tutorial.
       - name: Publish Zarf package to Distr registry
         run: zarf package publish zarf-package-hello-distr-*.tar.zst oci://demo-registry.distr.sh/artifacts
 
