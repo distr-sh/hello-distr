@@ -14,10 +14,11 @@ components:
     charts:
       - name: hello-distr
         namespace: hello-distr
+        version: "###ZARF_PKG_TMPL_VERSION###"
         localPath: ../charts/hello-distr
     images:
-      - "ghcr.io/distr-sh/hello-distr/backend:###ZARF_PKG_TMPL_VERSION###"
-      - "ghcr.io/distr-sh/hello-distr/frontend:###ZARF_PKG_TMPL_VERSION###"
-      - "ghcr.io/distr-sh/hello-distr/proxy:###ZARF_PKG_TMPL_VERSION###"
-      - "ghcr.io/distr-sh/hello-distr/jobs:###ZARF_PKG_TMPL_VERSION###"
+      - "registry.distr.sh/subconscious/hello-distr/backend:###ZARF_PKG_TMPL_VERSION###"
+      - "registry.distr.sh/subconscious/hello-distr/frontend:###ZARF_PKG_TMPL_VERSION###"
+      - "registry.distr.sh/subconscious/hello-distr/proxy:###ZARF_PKG_TMPL_VERSION###"
+      - "registry.distr.sh/subconscious/hello-distr/jobs:###ZARF_PKG_TMPL_VERSION###"
       - "docker.io/bitnamilegacy/postgresql:17.6.0-debian-12-r4"

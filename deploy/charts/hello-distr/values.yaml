@@ -10,7 +10,7 @@ config:
 backend:
   replicaCount: 1
   image:
-    repository: ghcr.io/distr-sh/hello-distr/backend
+    repository: registry.distr.sh/subconscious/hello-distr/backend
     pullPolicy: IfNotPresent
     tag: ""
   service:
@@ -30,7 +30,7 @@ backend:
 frontend:
   replicaCount: 1
   image:
-    repository: ghcr.io/distr-sh/hello-distr/frontend
+    repository: registry.distr.sh/subconscious/hello-distr/frontend
     pullPolicy: IfNotPresent
     tag: ""
   env: []
@@ -51,7 +51,7 @@ frontend:
 proxy:
   replicaCount: 1
   image:
-    repository: ghcr.io/distr-sh/hello-distr/proxy
+    repository: registry.distr.sh/subconscious/hello-distr/proxy
     pullPolicy: IfNotPresent
     tag: ""
   service:
@@ -71,7 +71,7 @@ proxy:
 # Jobs (Kubernetes CronJobs)
 jobs:
   image:
-    repository: ghcr.io/distr-sh/hello-distr/jobs
+    repository: registry.distr.sh/subconscious/hello-distr/jobs
     pullPolicy: IfNotPresent
     tag: ""
   resources: {}

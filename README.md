@@ -63,8 +63,8 @@ push a tag with the new version name to the repository.
 However you can also push a tag by yourself — it will also start the defined workflows. 
 
 The `build` job runs again, but this time, as the triggering event is a tag push, it will also log in to
-the GitHub registry before the build, push the resulting multi-platform images (`linux/amd64`, `linux/arm64`) to the registry,
-and build and push the Helm chart to `oci://ghcr.io/distr-sh/charts`.
+the Distr registry before the build, push the resulting multi-platform images (`linux/amd64`, `linux/arm64`) to the registry,
+and build and push the Helm chart to `oci://registry.distr.sh/subconscious/charts`.
 
 #### Releasing a new Distr application version (Docker)
 
@@ -92,7 +92,7 @@ you should remove this line to use the default Distr Hub (`app.distr.sh`) instea
 
 On release, the `distr-kubernetes` job uploads the Helm chart reference and base values to the Distr Hub.
 This works similarly to the Docker path, but uses a Distr application of type `kubernetes` instead. 
-The Helm chart is pushed as an OCI artifact to `oci://ghcr.io/distr-sh/charts/hello-distr`, and the compatibility matrix report 
+The Helm chart is pushed as an OCI artifact to `oci://registry.distr.sh/subconscious/charts/hello-distr`, and the compatibility matrix report 
 is attached as a visible resource so customers can see which Kubernetes versions were validated.
 
 Follow the same one-time setup steps as for Docker, but:

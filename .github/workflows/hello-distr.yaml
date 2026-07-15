@@ -38,7 +38,7 @@ jobs:
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
         uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
         with:
-          registry: demo-registry.distr.sh
+          registry: registry.distr.sh
           username: ${{ github.actor }}
           password: ${{ secrets.DISTR_TOKEN }}
       - name: Set up Docker Buildx
@@ -50,8 +50,9 @@ jobs:
           # NOTE: When following this as a tutorial, push to registry.distr.sh
           # instead of demo-registry.distr.sh.
           images: |
-            ghcr.io/distr-sh/hello-distr/${{ matrix.service }}
-            demo-registry.distr.sh/artifacts/hello-distr/${{ matrix.service }}
+            registry.distr.sh/subconscious/hello-distr/${{ matrix.service }}
+          flavor: |
+            latest=false
           tags: |
             type=ref,event=branch
             type=sha,event=branch
@@ -103,7 +104,7 @@ jobs:
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
         uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
         with:
-          registry: demo-registry.distr.sh
+          registry: registry.distr.sh
           username: ${{ github.actor }}
           password: ${{ secrets.DISTR_TOKEN }}
       - name: Push helm chart
@@ -112,8 +113,7 @@ jobs:
         # when following this as a tutorial.
         run: |
           for chart in hello-distr-*.tgz; do
-            helm push "$chart" oci://ghcr.io/distr-sh/charts
-            helm push "$chart" oci://demo-registry.distr.sh/artifacts/charts
+            helm push "$chart" oci://registry.distr.sh/subconscious/charts
           done
 
   build-zarf:
@@ -143,7 +143,7 @@ jobs:
       - name: Login to Distr Registry
         uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
         with:
-          registry: demo-registry.distr.sh
+          registry: registry.distr.sh
           username: ${{ github.actor }}
           password: ${{ secrets.DISTR_TOKEN }}
       - name: Setup Zarf
@@ -155,7 +155,7 @@ jobs:
       # NOTE: publish to registry.distr.sh instead of demo-registry.distr.sh
       # when following this as a tutorial.
       - name: Publish Zarf package to Distr registry
-        run: zarf package publish zarf-package-hello-distr-*.tar.zst oci://demo-registry.distr.sh/artifacts
+        run: zarf package publish zarf-package-hello-distr-*.tar.zst oci://registry.distr.sh/subconscious
 
   validate-chart:
     name: Validate chart (k8s ${{ matrix.kubernetes-version }})
@@ -240,18 +240,18 @@ jobs:
           chmod +x "$RUNNER_TEMP/osv-scanner"
           echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
           "$RUNNER_TEMP/osv-scanner" --version
-      - name: Login to GitHub Container Registry
+      - name: Login to Distr Registry
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
         uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
         with:
-          registry: ghcr.io
+          registry: registry.distr.sh
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.DISTR_TOKEN }}
       - name: Pull container images
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
         run: |
           for service in backend frontend proxy jobs; do
-            docker pull "ghcr.io/distr-sh/hello-distr/${service}:${{ github.ref_name }}"
+            docker pull "registry.distr.sh/subconscious/hello-distr/${service}:${{ github.ref_name }}"
           done
       - name: Run vulnerability scan
         run: |
@@ -281,8 +281,6 @@ jobs:
         include:
           - DISTR_TOKEN_SECRET: DISTR_TOKEN
             DISTR_APPLICATION_ID_VAR: DISTR_APPLICATION_ID
-          - DISTR_TOKEN_SECRET: DISTR_TOKEN_PMIG
-            DISTR_APPLICATION_ID_VAR: DISTR_APPLICATION_ID_PMIG
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
@@ -301,7 +299,7 @@ jobs:
         uses: distr-sh/distr-create-version-action@v1.6.2
         with:
           api-token: ${{ secrets[matrix.DISTR_TOKEN_SECRET] }}
-          api-base: "https://demo.distr.sh/api/v1"
+          api-base: "https://app.distr.sh/api/v1"
           application-id: ${{ vars[matrix.DISTR_APPLICATION_ID_VAR] }}
           version-name: ${{ github.ref_name }}
           compose-file: ${{ github.workspace }}/deploy/docker-compose.yaml
@@ -349,11 +347,11 @@ jobs:
         uses: distr-sh/distr-create-version-action@v1.6.2
         with:
           api-token: ${{ secrets.DISTR_TOKEN }}
-          api-base: "https://demo.distr.sh/api/v1"
+          api-base: "https://app.distr.sh/api/v1"
           application-id: ${{ vars.HELLO_DISTR_HELM_APPLICATION_ID }}
           version-name: ${{ github.ref_name }}
           chart-type: oci
-          chart-url: oci://ghcr.io/distr-sh/charts/hello-distr
+          chart-url: oci://registry.distr.sh/subconscious/charts/hello-distr
           chart-version: ${{ github.ref_name }}
           base-values-file: ${{ github.workspace }}/deploy/charts/hello-distr/values.yaml
           resources: |
