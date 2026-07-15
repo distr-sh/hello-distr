@@ -1,5 +1,35 @@
 # Changelog
 
+## [0.4.7](https://github.com/distr-sh/hello-distr/compare/0.4.6...0.4.7) (2026-07-15)
+
+
+### Bug Fixes
+
+* **deps:** replace dependency framer-motion with motion 12.42.2 ([#822](https://github.com/distr-sh/hello-distr/issues/822)) ([6b5f85b](https://github.com/distr-sh/hello-distr/commit/6b5f85ba4e3249ac276af1b646b39394dbf9236b))
+* **deps:** update nextjs monorepo to v16.2.10 ([#802](https://github.com/distr-sh/hello-distr/issues/802)) ([e09074e](https://github.com/distr-sh/hello-distr/commit/e09074eead518793db38c419ad26ba80892295f9))
+
+
+### Other
+
+* **deps:** update dependency @eslint/eslintrc to v3.3.6 ([#817](https://github.com/distr-sh/hello-distr/issues/817)) ([f08b872](https://github.com/distr-sh/hello-distr/commit/f08b87219d9bb985a536a29054984c7cbd6b16bc))
+* **deps:** update dependency @types/node to v25.9.5 ([#810](https://github.com/distr-sh/hello-distr/issues/810)) ([234a033](https://github.com/distr-sh/hello-distr/commit/234a033d4b56228d6fcfa61c2f088fd4d10165b3))
+* **deps:** update dependency autoprefixer to v10.5.3 ([#826](https://github.com/distr-sh/hello-distr/issues/826)) ([8d2ae7d](https://github.com/distr-sh/hello-distr/commit/8d2ae7d819d203e18665d79d1cfe320facc1af82))
+* **deps:** update dependency eslint-plugin-n to v18.2.2 ([#819](https://github.com/distr-sh/hello-distr/issues/819)) ([3243c49](https://github.com/distr-sh/hello-distr/commit/3243c49f8b8f7465b64c27496c58d4a0e766f049))
+* **deps:** update dependency intl-messageformat to v11.2.10 ([#815](https://github.com/distr-sh/hello-distr/issues/815)) ([7f210f9](https://github.com/distr-sh/hello-distr/commit/7f210f9a138e2e06c8f5f821c727f40c3c4fabb9))
+* **deps:** update dependency intl-messageformat to v11.2.11 ([#820](https://github.com/distr-sh/hello-distr/issues/820)) ([7e94305](https://github.com/distr-sh/hello-distr/commit/7e94305253b6ac645b9f75ca76f6481effe012db))
+* **deps:** update dependency postcss to v8.5.17 ([#821](https://github.com/distr-sh/hello-distr/issues/821)) ([1b194d6](https://github.com/distr-sh/hello-distr/commit/1b194d604934c1a968033644f1697f857aa9eec4))
+* **deps:** update dependency postcss to v8.5.18 ([#823](https://github.com/distr-sh/hello-distr/issues/823)) ([580a8ac](https://github.com/distr-sh/hello-distr/commit/580a8acd5c77612d93a140062a10643c016caaf0))
+* **deps:** update dependency postcss to v8.5.19 ([#824](https://github.com/distr-sh/hello-distr/issues/824)) ([406e975](https://github.com/distr-sh/hello-distr/commit/406e975f671b820816b68086f6a74318caff6d8c))
+* **deps:** update dependency prettier to v3.9.5 ([#816](https://github.com/distr-sh/hello-distr/issues/816)) ([311341e](https://github.com/distr-sh/hello-distr/commit/311341e5dbdf069139546f76ba4967138c6124c9))
+* **deps:** update docker/build-push-action action to v7.3.0 ([#803](https://github.com/distr-sh/hello-distr/issues/803)) ([b5492a6](https://github.com/distr-sh/hello-distr/commit/b5492a6206069fa8fe9546f4f3ae607c44d4a1c4))
+* **deps:** update docker/login-action action to v4.3.0 ([#805](https://github.com/distr-sh/hello-distr/issues/805)) ([22a9131](https://github.com/distr-sh/hello-distr/commit/22a913128933999ffd80db293790b5db03d31930))
+* **deps:** update docker/login-action action to v4.4.0 ([#808](https://github.com/distr-sh/hello-distr/issues/808)) ([26b980b](https://github.com/distr-sh/hello-distr/commit/26b980b121b406e63abe2770f7ea9bf408e6862b))
+* **deps:** update docker/metadata-action action to v6.2.0 ([#806](https://github.com/distr-sh/hello-distr/issues/806)) ([4763468](https://github.com/distr-sh/hello-distr/commit/476346843f38820c1a18c5d695aad21074f30664))
+* **deps:** update docker/setup-buildx-action action to v4.2.0 ([#807](https://github.com/distr-sh/hello-distr/issues/807)) ([2131da9](https://github.com/distr-sh/hello-distr/commit/2131da9336e70c028cd8a7431c8f95cd3f2eafc2))
+* **deps:** update eslint monorepo to v9.39.5 ([#818](https://github.com/distr-sh/hello-distr/issues/818)) ([85bb578](https://github.com/distr-sh/hello-distr/commit/85bb5788d8f3ee98bcf0c5c9fa7451826c980a19))
+* **deps:** update typescript-eslint monorepo to v8.63.0 ([#809](https://github.com/distr-sh/hello-distr/issues/809)) ([7e732c3](https://github.com/distr-sh/hello-distr/commit/7e732c33b10c7c6d3185edd5f53556750f0bfc21))
+* **deps:** update typescript-eslint monorepo to v8.64.0 ([#825](https://github.com/distr-sh/hello-distr/issues/825)) ([92b3012](https://github.com/distr-sh/hello-distr/commit/92b301247ecc687462b405deb6e1d0afb3356b2f))
+
 ## [0.4.6](https://github.com/distr-sh/hello-distr/compare/0.4.5...0.4.6) (2026-07-01)
 
 
