@@ -14,6 +14,7 @@ components:
     charts:
       - name: hello-distr
         namespace: hello-distr
+        version: "###ZARF_PKG_TMPL_VERSION###"
         localPath: ../charts/hello-distr
     images:
       - "ghcr.io/distr-sh/hello-distr/backend:###ZARF_PKG_TMPL_VERSION###"

@@ -9,6 +9,9 @@ services:
       POSTGRES_USER: local
       POSTGRES_PASSWORD: local
       POSTGRES_DB: hello-distr
+      # Subdirectory needed because the volume mount point contains lost+found,
+      # which makes initdb refuse to initialize
+      PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - 'postgres:/var/lib/postgresql/data/'
     ports:

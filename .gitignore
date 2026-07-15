@@ -1,5 +1,7 @@
 .idea
 deploy/charts/*/charts/
+build/
+zarf-package-*.tar.zst
 compatibility-matrix.md
 compatibility-matrix-*.md
 kubeconform-*.json
