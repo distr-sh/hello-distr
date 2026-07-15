@@ -151,11 +151,18 @@ jobs:
         with:
           version: v0.80.0
       - name: Create Zarf package
-        run: zarf package create deploy/zarf --set VERSION="${{ github.ref_name }}" --confirm
+        run: |
+          zarf package create deploy/zarf -a amd64 --set VERSION="${{ github.ref_name }}" --confirm
+          zarf package create deploy/zarf -a arm64 --set VERSION="${{ github.ref_name }}" --confirm
       # NOTE: publish to registry.distr.sh instead of demo-registry.distr.sh
       # when following this as a tutorial.
+      # Publishing both architectures to the same reference creates a
+      # multi-arch OCI index.
       - name: Publish Zarf package to Distr registry
-        run: zarf package publish zarf-package-hello-distr-*.tar.zst oci://demo-registry.distr.sh/artifacts
+        run: |
+          for pkg in zarf-package-hello-distr-*.tar.zst; do
+            zarf package publish "$pkg" oci://demo-registry.distr.sh/artifacts
+          done
 
   validate-chart:
     name: Validate chart (k8s ${{ matrix.kubernetes-version }})
