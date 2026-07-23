@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.4.8](https://github.com/distr-sh/hello-distr/compare/0.4.7...0.4.8) (2026-07-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react to v19.2.8 ([#837](https://github.com/distr-sh/hello-distr/issues/837)) ([5fb1834](https://github.com/distr-sh/hello-distr/commit/5fb1834009a762400ad65d04efa5b49b15884902))
+* **deps:** update dependency react-dom to v19.2.8 ([#838](https://github.com/distr-sh/hello-distr/issues/838)) ([8c59787](https://github.com/distr-sh/hello-distr/commit/8c59787cdeadeb0820969c1eac473748e3835a37))
+* **deps:** update nextjs monorepo to v16.2.11 ([#839](https://github.com/distr-sh/hello-distr/issues/839)) ([245f48e](https://github.com/distr-sh/hello-distr/commit/245f48ee8390bf49414da76fbfbbd05a03ab37b0))
+
+
+### Other
+
+* **deps:** update actions/checkout action to v7.0.1 ([#833](https://github.com/distr-sh/hello-distr/issues/833)) ([08a5cbe](https://github.com/distr-sh/hello-distr/commit/08a5cbed42695c69f0223a284dd564f84f15ed72))
+* **deps:** update dependency autoprefixer to v10.5.4 ([#829](https://github.com/distr-sh/hello-distr/issues/829)) ([c8e9a2e](https://github.com/distr-sh/hello-distr/commit/c8e9a2e039c90506a86cb33f471c3f35bbda9fcd))
+* **deps:** update dependency intl-messageformat to v11.2.12 ([#828](https://github.com/distr-sh/hello-distr/issues/828)) ([d6862d9](https://github.com/distr-sh/hello-distr/commit/d6862d9bab313e1432f63d135f7905c12734e564))
+* **deps:** update dependency postcss to v8.5.20 ([#832](https://github.com/distr-sh/hello-distr/issues/832)) ([d7903cb](https://github.com/distr-sh/hello-distr/commit/d7903cbfd58267f51082689c62e5666c9ec4214f))
+* **deps:** update dependency postcss to v8.5.21 ([#835](https://github.com/distr-sh/hello-distr/issues/835)) ([5a99274](https://github.com/distr-sh/hello-distr/commit/5a99274d99eefa80515d0205b5eaf586014d4938))
+* **deps:** update dependency postcss to v8.5.22 ([#840](https://github.com/distr-sh/hello-distr/issues/840)) ([222ef8f](https://github.com/distr-sh/hello-distr/commit/222ef8f86a6f9cb81c3685c76fbebd4f7d142ae2))
+* **deps:** update dependency prettier to v3.9.6 ([#836](https://github.com/distr-sh/hello-distr/issues/836)) ([f800ee5](https://github.com/distr-sh/hello-distr/commit/f800ee5578aaf4403773a1756ca190e949676d85))
+* **deps:** update docker/login-action action to v4.5.0 ([#841](https://github.com/distr-sh/hello-distr/issues/841)) ([aa54f85](https://github.com/distr-sh/hello-distr/commit/aa54f854fbfafa83ab44e8b3570ac27410a8daf7))
+* **deps:** update tailwindcss monorepo to v4.3.3 ([#831](https://github.com/distr-sh/hello-distr/issues/831)) ([4f37c88](https://github.com/distr-sh/hello-distr/commit/4f37c880cb7c87739606f6f1b9188008d71aa5c2))
+* **deps:** update typescript-eslint monorepo to v8.65.0 ([#834](https://github.com/distr-sh/hello-distr/issues/834)) ([76dee3b](https://github.com/distr-sh/hello-distr/commit/76dee3b51040c8362a4a0e1e1ebd468811b3f190))
+
 ## [0.4.7](https://github.com/distr-sh/hello-distr/compare/0.4.6...0.4.7) (2026-07-15)
 
 
