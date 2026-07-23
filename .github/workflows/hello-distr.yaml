@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Login to GitHub Container Registry
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        uses: docker/login-action@06fb636fac595d6fb4b28a5dfcb21a6f5091859c # v4.5.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -36,7 +36,7 @@ jobs:
       # (the production Distr registry) here and everywhere else below.
       - name: Login to Distr Registry
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        uses: docker/login-action@06fb636fac595d6fb4b28a5dfcb21a6f5091859c # v4.5.0
         with:
           registry: demo-registry.distr.sh
           username: ${{ github.actor }}
@@ -91,7 +91,7 @@ jobs:
           helm package deploy/charts/hello-distr
       - name: Login to GitHub Container Registry
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        uses: docker/login-action@06fb636fac595d6fb4b28a5dfcb21a6f5091859c # v4.5.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -101,7 +101,7 @@ jobs:
       # with registry.distr.sh (the production Distr registry).
       - name: Login to Distr Registry
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        uses: docker/login-action@06fb636fac595d6fb4b28a5dfcb21a6f5091859c # v4.5.0
         with:
           registry: demo-registry.distr.sh
           username: ${{ github.actor }}
@@ -132,7 +132,7 @@ jobs:
       - name: Build helm dependencies
         run: helm dependency build deploy/charts/hello-distr
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        uses: docker/login-action@06fb636fac595d6fb4b28a5dfcb21a6f5091859c # v4.5.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -141,7 +141,7 @@ jobs:
       # this example repository. When following this as a tutorial, replace it
       # with registry.distr.sh (the production Distr registry).
       - name: Login to Distr Registry
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        uses: docker/login-action@06fb636fac595d6fb4b28a5dfcb21a6f5091859c # v4.5.0
         with:
           registry: demo-registry.distr.sh
           username: ${{ github.actor }}
@@ -183,7 +183,7 @@ jobs:
       - name: Build helm dependencies
         run: helm dependency build deploy/charts/hello-distr
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        uses: docker/login-action@06fb636fac595d6fb4b28a5dfcb21a6f5091859c # v4.5.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -249,7 +249,7 @@ jobs:
           "$RUNNER_TEMP/osv-scanner" --version
       - name: Login to GitHub Container Registry
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        uses: docker/login-action@06fb636fac595d6fb4b28a5dfcb21a6f5091859c # v4.5.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
