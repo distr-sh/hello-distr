@@ -1,5 +1,61 @@
 # Changelog
 
+## [0.4.8](https://github.com/distr-sh/hello-distr/compare/0.4.7...0.4.8) (2026-09-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v12.43.0 ([#849](https://github.com/distr-sh/hello-distr/issues/849)) ([8cfe8da](https://github.com/distr-sh/hello-distr/commit/8cfe8da5aba540bf352fd35eadfbde61a13e006c))
+* **deps:** update dependency motion to v13 ([#861](https://github.com/distr-sh/hello-distr/issues/861)) ([303988b](https://github.com/distr-sh/hello-distr/commit/303988bcc1ec461f7b2b692c536d9be17c116d5e))
+* **deps:** update dependency motion to v13.1.0 ([#866](https://github.com/distr-sh/hello-distr/issues/866)) ([61bbb4f](https://github.com/distr-sh/hello-distr/commit/61bbb4f15d17b5adbc69d057124b35bae6d8e7fa))
+* **deps:** update dependency motion to v13.1.1 ([#872](https://github.com/distr-sh/hello-distr/issues/872)) ([395819f](https://github.com/distr-sh/hello-distr/commit/395819f8d7b36f919b3f92d2172fb8f5ddf51b1a))
+* **deps:** update dependency motion to v13.2.0 ([#881](https://github.com/distr-sh/hello-distr/issues/881)) ([5b0ba4b](https://github.com/distr-sh/hello-distr/commit/5b0ba4b2d6604df3543d084aa65eb77ac271c651))
+* **deps:** update dependency react to v19.2.8 ([#837](https://github.com/distr-sh/hello-distr/issues/837)) ([5fb1834](https://github.com/distr-sh/hello-distr/commit/5fb1834009a762400ad65d04efa5b49b15884902))
+* **deps:** update dependency react-dom to v19.2.8 ([#838](https://github.com/distr-sh/hello-distr/issues/838)) ([8c59787](https://github.com/distr-sh/hello-distr/commit/8c59787cdeadeb0820969c1eac473748e3835a37))
+* **deps:** update nextjs monorepo to v16.2.11 ([#839](https://github.com/distr-sh/hello-distr/issues/839)) ([245f48e](https://github.com/distr-sh/hello-distr/commit/245f48ee8390bf49414da76fbfbbd05a03ab37b0))
+* **deps:** update nextjs monorepo to v16.2.12 ([#845](https://github.com/distr-sh/hello-distr/issues/845)) ([aa22f09](https://github.com/distr-sh/hello-distr/commit/aa22f09760713c3b22c0e4751117e54ce3a21bbc))
+
+
+### Other
+
+* **deps:** update actions/checkout action to v7.0.1 ([#833](https://github.com/distr-sh/hello-distr/issues/833)) ([08a5cbe](https://github.com/distr-sh/hello-distr/commit/08a5cbed42695c69f0223a284dd564f84f15ed72))
+* **deps:** update dependency @eslint/eslintrc to v3.3.7 ([#879](https://github.com/distr-sh/hello-distr/issues/879)) ([32dd75d](https://github.com/distr-sh/hello-distr/commit/32dd75d9e33650dd5e5c9cc16720802f1888495c))
+* **deps:** update dependency @playwright/test to v1.62.0 ([#844](https://github.com/distr-sh/hello-distr/issues/844)) ([0cb479d](https://github.com/distr-sh/hello-distr/commit/0cb479d030595b6c000d87cbf40f4f04cb960ae9))
+* **deps:** update dependency @playwright/test to v1.62.1 ([#852](https://github.com/distr-sh/hello-distr/issues/852)) ([d452700](https://github.com/distr-sh/hello-distr/commit/d452700179af1a3f12c5a5a85ea1e928d588eb34))
+* **deps:** update dependency @react-types/shared to v3.36.1 ([#855](https://github.com/distr-sh/hello-distr/issues/855)) ([dc19ca4](https://github.com/distr-sh/hello-distr/commit/dc19ca4880c3e3fbb3a6ecdffa2b7c40643f2bc3))
+* **deps:** update dependency @types/react-dom to v19.2.5 ([#874](https://github.com/distr-sh/hello-distr/issues/874)) ([28a4361](https://github.com/distr-sh/hello-distr/commit/28a43618fce318512f7eaf0f6b695892d3a0496d))
+* **deps:** update dependency @types/react-dom to v19.2.7 ([#883](https://github.com/distr-sh/hello-distr/issues/883)) ([da463de](https://github.com/distr-sh/hello-distr/commit/da463de38f8c58eaa5e2624feb41ee8e21b5374e))
+* **deps:** update dependency autoprefixer to v10.5.4 ([#829](https://github.com/distr-sh/hello-distr/issues/829)) ([c8e9a2e](https://github.com/distr-sh/hello-distr/commit/c8e9a2e039c90506a86cb33f471c3f35bbda9fcd))
+* **deps:** update dependency autoprefixer to v10.5.5 ([#885](https://github.com/distr-sh/hello-distr/issues/885)) ([a9ffc96](https://github.com/distr-sh/hello-distr/commit/a9ffc9654a00979f713db6b7d4915849fed3c97d))
+* **deps:** update dependency eslint-plugin-n to v18.3.0 ([#864](https://github.com/distr-sh/hello-distr/issues/864)) ([4bdf0c1](https://github.com/distr-sh/hello-distr/commit/4bdf0c13564f6c882cea744b6a94d6759eea1ce2))
+* **deps:** update dependency intl-messageformat to v11.2.12 ([#828](https://github.com/distr-sh/hello-distr/issues/828)) ([d6862d9](https://github.com/distr-sh/hello-distr/commit/d6862d9bab313e1432f63d135f7905c12734e564))
+* **deps:** update dependency intl-messageformat to v11.2.13 ([#854](https://github.com/distr-sh/hello-distr/issues/854)) ([81d456c](https://github.com/distr-sh/hello-distr/commit/81d456c435b0e76e187a62a551568920f88543d7))
+* **deps:** update dependency intl-messageformat to v11.2.14 ([#870](https://github.com/distr-sh/hello-distr/issues/870)) ([7d66243](https://github.com/distr-sh/hello-distr/commit/7d66243de881c4ee81baca0e872fe805d3810ec3))
+* **deps:** update dependency postcss to v8.5.20 ([#832](https://github.com/distr-sh/hello-distr/issues/832)) ([d7903cb](https://github.com/distr-sh/hello-distr/commit/d7903cbfd58267f51082689c62e5666c9ec4214f))
+* **deps:** update dependency postcss to v8.5.21 ([#835](https://github.com/distr-sh/hello-distr/issues/835)) ([5a99274](https://github.com/distr-sh/hello-distr/commit/5a99274d99eefa80515d0205b5eaf586014d4938))
+* **deps:** update dependency postcss to v8.5.22 ([#840](https://github.com/distr-sh/hello-distr/issues/840)) ([222ef8f](https://github.com/distr-sh/hello-distr/commit/222ef8f86a6f9cb81c3685c76fbebd4f7d142ae2))
+* **deps:** update dependency postcss to v8.5.23 ([#842](https://github.com/distr-sh/hello-distr/issues/842)) ([2d94c38](https://github.com/distr-sh/hello-distr/commit/2d94c38f2cee9302f1059df03a717b346d30c989))
+* **deps:** update dependency postcss to v8.5.24 ([#847](https://github.com/distr-sh/hello-distr/issues/847)) ([0f85f1a](https://github.com/distr-sh/hello-distr/commit/0f85f1a5c3adebc2b87e2fedca842be264a2bfb3))
+* **deps:** update dependency postcss to v8.5.25 ([#850](https://github.com/distr-sh/hello-distr/issues/850)) ([740f28d](https://github.com/distr-sh/hello-distr/commit/740f28d91bd455ea6369518084145b37a4837446))
+* **deps:** update dependency postcss to v8.5.26 ([#862](https://github.com/distr-sh/hello-distr/issues/862)) ([f3f0059](https://github.com/distr-sh/hello-distr/commit/f3f00592d149bff2df8e20f2622346b3441ed4eb))
+* **deps:** update dependency postcss to v8.5.28 ([#884](https://github.com/distr-sh/hello-distr/issues/884)) ([7728ac5](https://github.com/distr-sh/hello-distr/commit/7728ac581e6bb8ccfc8ac6562ed6b498633be7cd))
+* **deps:** update dependency prettier to v3.9.6 ([#836](https://github.com/distr-sh/hello-distr/issues/836)) ([f800ee5](https://github.com/distr-sh/hello-distr/commit/f800ee5578aaf4403773a1756ca190e949676d85))
+* **deps:** update dependency python-dotenv to v1.2.3 ([#869](https://github.com/distr-sh/hello-distr/issues/869)) ([3ec0f68](https://github.com/distr-sh/hello-distr/commit/3ec0f687f9d8de1189625b452b440981f47bd599))
+* **deps:** update dependency tailwind-variants to v3.3.0 ([#846](https://github.com/distr-sh/hello-distr/issues/846)) ([8af48bd](https://github.com/distr-sh/hello-distr/commit/8af48bd9b8b0e240d29cfbf7d8970f5e81f00147))
+* **deps:** update dependency tailwind-variants to v3.3.1 ([#856](https://github.com/distr-sh/hello-distr/issues/856)) ([12d3a98](https://github.com/distr-sh/hello-distr/commit/12d3a98c59ed79313e4cd33dacbc8fb61485d167))
+* **deps:** update docker/login-action action to v4.5.0 ([#841](https://github.com/distr-sh/hello-distr/issues/841)) ([aa54f85](https://github.com/distr-sh/hello-distr/commit/aa54f854fbfafa83ab44e8b3570ac27410a8daf7))
+* **deps:** update docker/login-action action to v4.5.1 ([#843](https://github.com/distr-sh/hello-distr/issues/843)) ([34eab98](https://github.com/distr-sh/hello-distr/commit/34eab98133a21fb6a344bc828f6252c5db1a17b5))
+* **deps:** update docker/login-action action to v4.5.2 ([#848](https://github.com/distr-sh/hello-distr/issues/848)) ([948b350](https://github.com/distr-sh/hello-distr/commit/948b3500d7b6aa8d3661b96d9c67235bdc73dbb3))
+* **deps:** update docker/login-action action to v4.6.0 ([#851](https://github.com/distr-sh/hello-distr/issues/851)) ([411a6e8](https://github.com/distr-sh/hello-distr/commit/411a6e850865da593ee47fdb1fbd4baf6676ee8f))
+* **deps:** update docker/setup-buildx-action action to v4.3.0 ([#871](https://github.com/distr-sh/hello-distr/issues/871)) ([7c59848](https://github.com/distr-sh/hello-distr/commit/7c59848e12fae5db01ba1c49e8b6b675cb7921fd))
+* **deps:** update react monorepo ([#853](https://github.com/distr-sh/hello-distr/issues/853)) ([5ce82f3](https://github.com/distr-sh/hello-distr/commit/5ce82f33626e176ccd970dd11906f474a79af2da))
+* **deps:** update tailwindcss monorepo to v4.3.3 ([#831](https://github.com/distr-sh/hello-distr/issues/831)) ([4f37c88](https://github.com/distr-sh/hello-distr/commit/4f37c880cb7c87739606f6f1b9188008d71aa5c2))
+* **deps:** update typescript-eslint monorepo to v8.65.0 ([#834](https://github.com/distr-sh/hello-distr/issues/834)) ([76dee3b](https://github.com/distr-sh/hello-distr/commit/76dee3b51040c8362a4a0e1e1ebd468811b3f190))
+* **deps:** update typescript-eslint monorepo to v8.66.0 ([#857](https://github.com/distr-sh/hello-distr/issues/857)) ([c7bd906](https://github.com/distr-sh/hello-distr/commit/c7bd906df8e01be78179f8a6b6c2fbe6cf0106ea))
+* **deps:** update typescript-eslint monorepo to v8.67.0 ([#867](https://github.com/distr-sh/hello-distr/issues/867)) ([1b417ef](https://github.com/distr-sh/hello-distr/commit/1b417efb0b9eb7c9830d0e9dee22bdbeaf59e534))
+* **deps:** update typescript-eslint monorepo to v8.68.0 ([#876](https://github.com/distr-sh/hello-distr/issues/876)) ([ae3e1ac](https://github.com/distr-sh/hello-distr/commit/ae3e1ac2333cf9dc6413cc384bd9ca3b847a9a15))
+* **deps:** update typescript-eslint monorepo to v8.69.0 ([#878](https://github.com/distr-sh/hello-distr/issues/878)) ([1e5fc4d](https://github.com/distr-sh/hello-distr/commit/1e5fc4d2170dc1022ba89ce2d8198dab94b66cba))
+
 ## [0.4.7](https://github.com/distr-sh/hello-distr/compare/0.4.6...0.4.7) (2026-07-15)
 
 
