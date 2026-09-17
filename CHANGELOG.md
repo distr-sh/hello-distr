@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.4.9](https://github.com/distr-sh/hello-distr/compare/0.4.8...0.4.9) (2026-09-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency intl-messageformat to v12 ([#903](https://github.com/distr-sh/hello-distr/issues/903)) ([73d2dda](https://github.com/distr-sh/hello-distr/commit/73d2dda5b857bdfc37a114db3bb03c2f2a560a6c))
+* **deps:** update dependency motion to v13.4.0 ([#905](https://github.com/distr-sh/hello-distr/issues/905)) ([26764c3](https://github.com/distr-sh/hello-distr/commit/26764c3750a86bbf13bc4fcbc00430de1387579d))
+
+
+### Other
+
+* **deps:** update dependency prettier to v3.9.7 ([#904](https://github.com/distr-sh/hello-distr/issues/904)) ([9c88eac](https://github.com/distr-sh/hello-distr/commit/9c88eace7ff7fb2137d4a3ce7847e12459583dce))
+* **deps:** update docker/setup-buildx-action action to v4.4.1 ([#902](https://github.com/distr-sh/hello-distr/issues/902)) ([a603f8a](https://github.com/distr-sh/hello-distr/commit/a603f8a853e9265ef02e1f747d39557dd3a263d9))
+
 ## [0.4.8](https://github.com/distr-sh/hello-distr/compare/0.4.7...0.4.8) (2026-09-16)
 
 
