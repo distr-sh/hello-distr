@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.10](https://github.com/distr-sh/hello-distr/compare/0.4.9...0.4.10) (2026-09-19)
+
+
+### Other
+
+* **deps:** update dependency @types/node to v25.9.8 ([#910](https://github.com/distr-sh/hello-distr/issues/910)) ([e20f2b2](https://github.com/distr-sh/hello-distr/commit/e20f2b2c6017c80d708fe8cca1f07d198becf3d4))
+* **deps:** update dependency intl-messageformat to v12.1.1 ([#909](https://github.com/distr-sh/hello-distr/issues/909)) ([cf9772e](https://github.com/distr-sh/hello-distr/commit/cf9772e6fbd0c2b2f7e03b8013ff42529ecde13c))
+* **deps:** update dependency prettier to v3.9.8 ([#907](https://github.com/distr-sh/hello-distr/issues/907)) ([eecc424](https://github.com/distr-sh/hello-distr/commit/eecc424a6f8830e7e654fe21170e5160539fa701))
+
 ## [0.4.9](https://github.com/distr-sh/hello-distr/compare/0.4.8...0.4.9) (2026-09-17)
 
 
