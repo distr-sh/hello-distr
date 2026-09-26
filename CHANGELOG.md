@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.4.10](https://github.com/distr-sh/hello-distr/compare/0.4.9...0.4.10) (2026-09-26)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v13.4.1 ([#914](https://github.com/distr-sh/hello-distr/issues/914)) ([d6d0ae1](https://github.com/distr-sh/hello-distr/commit/d6d0ae135deedda42a6745ca0259a503fa402e89))
+* **deps:** update dependency motion to v13.4.4 ([#916](https://github.com/distr-sh/hello-distr/issues/916)) ([e21ed4a](https://github.com/distr-sh/hello-distr/commit/e21ed4afb9c8b269e3955df12f835ad55991b6f2))
+
+
+### Other
+
+* **deps:** update dependency @types/node to v25.9.8 ([#910](https://github.com/distr-sh/hello-distr/issues/910)) ([e20f2b2](https://github.com/distr-sh/hello-distr/commit/e20f2b2c6017c80d708fe8cca1f07d198becf3d4))
+* **deps:** update dependency eslint-plugin-n to v18.4.0 ([#917](https://github.com/distr-sh/hello-distr/issues/917)) ([23f3f86](https://github.com/distr-sh/hello-distr/commit/23f3f861fed7eceba498603de34723a90cc96d3b))
+* **deps:** update dependency intl-messageformat to v12.1.1 ([#909](https://github.com/distr-sh/hello-distr/issues/909)) ([cf9772e](https://github.com/distr-sh/hello-distr/commit/cf9772e6fbd0c2b2f7e03b8013ff42529ecde13c))
+* **deps:** update dependency intl-messageformat to v12.1.2 ([#911](https://github.com/distr-sh/hello-distr/issues/911)) ([1d221b6](https://github.com/distr-sh/hello-distr/commit/1d221b6926420de640bd0e7acb242e28adf88495))
+* **deps:** update dependency prettier to v3.9.8 ([#907](https://github.com/distr-sh/hello-distr/issues/907)) ([eecc424](https://github.com/distr-sh/hello-distr/commit/eecc424a6f8830e7e654fe21170e5160539fa701))
+* **deps:** update dependency prettier to v3.9.9 ([#915](https://github.com/distr-sh/hello-distr/issues/915)) ([aeb4cc3](https://github.com/distr-sh/hello-distr/commit/aeb4cc3dd274b09576f9611b416ee4d99c6e02da))
+* **deps:** update nextjs monorepo to v16.3.6 ([#913](https://github.com/distr-sh/hello-distr/issues/913)) ([8e7f140](https://github.com/distr-sh/hello-distr/commit/8e7f1408d5d72587e7308509e0f07623085eda33))
+* **deps:** update typescript-eslint monorepo to v8.70.1 ([#912](https://github.com/distr-sh/hello-distr/issues/912)) ([9ede070](https://github.com/distr-sh/hello-distr/commit/9ede070f30d4a78a1db59a703397640350e84930))
+
 ## [0.4.9](https://github.com/distr-sh/hello-distr/compare/0.4.8...0.4.9) (2026-09-17)
 
 
