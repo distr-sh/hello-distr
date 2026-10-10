@@ -1,5 +1,43 @@
 # Changelog
 
+## [0.4.10](https://github.com/distr-sh/hello-distr/compare/0.4.9...0.4.10) (2026-10-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v13.4.1 ([#914](https://github.com/distr-sh/hello-distr/issues/914)) ([d6d0ae1](https://github.com/distr-sh/hello-distr/commit/d6d0ae135deedda42a6745ca0259a503fa402e89))
+* **deps:** update dependency motion to v13.4.4 ([#916](https://github.com/distr-sh/hello-distr/issues/916)) ([e21ed4a](https://github.com/distr-sh/hello-distr/commit/e21ed4afb9c8b269e3955df12f835ad55991b6f2))
+* **deps:** update dependency motion to v13.4.6 ([#920](https://github.com/distr-sh/hello-distr/issues/920)) ([d1cb552](https://github.com/distr-sh/hello-distr/commit/d1cb55217289cc194414861ffa599caba89fe81a))
+* **deps:** update dependency motion to v13.5.0 ([#923](https://github.com/distr-sh/hello-distr/issues/923)) ([ec41478](https://github.com/distr-sh/hello-distr/commit/ec41478b352be8d3fe499e21495ef79373d5b6cf))
+* **deps:** update dependency motion to v13.5.1 ([#925](https://github.com/distr-sh/hello-distr/issues/925)) ([d599d2a](https://github.com/distr-sh/hello-distr/commit/d599d2a7b7c8eb5bc119239eef59b6b9b21af7cf))
+* **deps:** update dependency motion to v14 ([#926](https://github.com/distr-sh/hello-distr/issues/926)) ([cfaf864](https://github.com/distr-sh/hello-distr/commit/cfaf86436f7487818a49373c94b70c39f92fbb9a))
+* **deps:** update dependency motion to v14.1.0 ([#935](https://github.com/distr-sh/hello-distr/issues/935)) ([97bafe8](https://github.com/distr-sh/hello-distr/commit/97bafe8967d7050c85e7380bd605a44dcb9a8c8e))
+
+
+### Other
+
+* **deps:** update dependency @playwright/test to v1.64.0 ([#933](https://github.com/distr-sh/hello-distr/issues/933)) ([93bb342](https://github.com/distr-sh/hello-distr/commit/93bb342d40f053a14ec1cc761f5ba600d4721a32))
+* **deps:** update dependency @react-types/shared to v3.37.0 ([#934](https://github.com/distr-sh/hello-distr/issues/934)) ([70a2c1a](https://github.com/distr-sh/hello-distr/commit/70a2c1a62c446bad2d1e434bd92dedf9c5a2033c))
+* **deps:** update dependency @types/node to v25.9.8 ([#910](https://github.com/distr-sh/hello-distr/issues/910)) ([e20f2b2](https://github.com/distr-sh/hello-distr/commit/e20f2b2c6017c80d708fe8cca1f07d198becf3d4))
+* **deps:** update dependency @types/node to v25.9.9 ([#924](https://github.com/distr-sh/hello-distr/issues/924)) ([299294a](https://github.com/distr-sh/hello-distr/commit/299294a21f3aafae91424e45c0e1a318ceec5151))
+* **deps:** update dependency eslint-plugin-n to v18.4.0 ([#917](https://github.com/distr-sh/hello-distr/issues/917)) ([23f3f86](https://github.com/distr-sh/hello-distr/commit/23f3f861fed7eceba498603de34723a90cc96d3b))
+* **deps:** update dependency eslint-plugin-n to v18.4.1 ([#928](https://github.com/distr-sh/hello-distr/issues/928)) ([8e30ce4](https://github.com/distr-sh/hello-distr/commit/8e30ce4a6ae46d62fddb23560ef872ab18ab3655))
+* **deps:** update dependency intl-messageformat to v12.1.1 ([#909](https://github.com/distr-sh/hello-distr/issues/909)) ([cf9772e](https://github.com/distr-sh/hello-distr/commit/cf9772e6fbd0c2b2f7e03b8013ff42529ecde13c))
+* **deps:** update dependency intl-messageformat to v12.1.2 ([#911](https://github.com/distr-sh/hello-distr/issues/911)) ([1d221b6](https://github.com/distr-sh/hello-distr/commit/1d221b6926420de640bd0e7acb242e28adf88495))
+* **deps:** update dependency intl-messageformat to v12.1.3 ([#930](https://github.com/distr-sh/hello-distr/issues/930)) ([f1f7d16](https://github.com/distr-sh/hello-distr/commit/f1f7d16f7b6bd88e4302858f902782de3fb6cec6))
+* **deps:** update dependency postcss to v8.5.29 ([#929](https://github.com/distr-sh/hello-distr/issues/929)) ([3398025](https://github.com/distr-sh/hello-distr/commit/3398025fd684f9c9e3d20b9c68736f4e2561682d))
+* **deps:** update dependency prettier to v3.9.10 ([#936](https://github.com/distr-sh/hello-distr/issues/936)) ([f5233eb](https://github.com/distr-sh/hello-distr/commit/f5233ebec992660bf176657554aa6c9fa76134e2))
+* **deps:** update dependency prettier to v3.9.8 ([#907](https://github.com/distr-sh/hello-distr/issues/907)) ([eecc424](https://github.com/distr-sh/hello-distr/commit/eecc424a6f8830e7e654fe21170e5160539fa701))
+* **deps:** update dependency prettier to v3.9.9 ([#915](https://github.com/distr-sh/hello-distr/issues/915)) ([aeb4cc3](https://github.com/distr-sh/hello-distr/commit/aeb4cc3dd274b09576f9611b416ee4d99c6e02da))
+* **deps:** update dependency python-dotenv to v1.2.4 ([#922](https://github.com/distr-sh/hello-distr/issues/922)) ([198779e](https://github.com/distr-sh/hello-distr/commit/198779e1f2e04b53a9fcd6c22e99e1ec07a65fa3))
+* **deps:** update nextjs monorepo to v16.3.6 ([#913](https://github.com/distr-sh/hello-distr/issues/913)) ([8e7f140](https://github.com/distr-sh/hello-distr/commit/8e7f1408d5d72587e7308509e0f07623085eda33))
+* **deps:** update nextjs monorepo to v16.3.7 ([#919](https://github.com/distr-sh/hello-distr/issues/919)) ([b2d7033](https://github.com/distr-sh/hello-distr/commit/b2d70339dad227137017402b496831bd76d10c29))
+* **deps:** update nextjs monorepo to v16.3.8 ([#921](https://github.com/distr-sh/hello-distr/issues/921)) ([7c8bee0](https://github.com/distr-sh/hello-distr/commit/7c8bee0a7b3d6611fa41e199338893106d5baefe))
+* **deps:** update nextjs monorepo to v16.4.0 ([#932](https://github.com/distr-sh/hello-distr/issues/932)) ([8246028](https://github.com/distr-sh/hello-distr/commit/82460285324be536714a5396c03abd7a6cc9df95))
+* **deps:** update typescript-eslint monorepo to v8.70.1 ([#912](https://github.com/distr-sh/hello-distr/issues/912)) ([9ede070](https://github.com/distr-sh/hello-distr/commit/9ede070f30d4a78a1db59a703397640350e84930))
+* **deps:** update typescript-eslint monorepo to v8.71.0 ([#918](https://github.com/distr-sh/hello-distr/issues/918)) ([5fe2de7](https://github.com/distr-sh/hello-distr/commit/5fe2de7bbfc97d32bf168c7a7a8ed0ba1b32781d))
+* **deps:** update typescript-eslint monorepo to v8.71.1 ([#931](https://github.com/distr-sh/hello-distr/issues/931)) ([4aef5e7](https://github.com/distr-sh/hello-distr/commit/4aef5e72c142f6471cf1e027a4a945e0fa93c2d0))
+
 ## [0.4.9](https://github.com/distr-sh/hello-distr/compare/0.4.8...0.4.9) (2026-09-17)
 
 
