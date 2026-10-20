@@ -195,7 +195,7 @@ jobs:
         run: cat "compatibility-matrix-${{ matrix.kubernetes-version }}.md" >> "$GITHUB_STEP_SUMMARY"
       - name: Upload report
         if: always()
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: compatibility-matrix-${{ matrix.kubernetes-version }}
           path: |
@@ -211,7 +211,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Download all reports
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           pattern: compatibility-matrix-*
           path: reports
@@ -221,7 +221,7 @@ jobs:
       - name: Write job summary
         run: cat compatibility-matrix.md >> "$GITHUB_STEP_SUMMARY"
       - name: Upload unified report
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: compatibility-matrix-report
           path: compatibility-matrix.md
@@ -272,7 +272,7 @@ jobs:
         run: cat vulnerability-scan.md >> "$GITHUB_STEP_SUMMARY"
       - name: Upload report
         if: always()
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: vulnerability-scan-report
           path: |
@@ -295,17 +295,17 @@ jobs:
     steps:
       - name: Checkout
         id: checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Download vulnerability scan report
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: vulnerability-scan-report
           path: ${{ github.workspace }}/artifacts
 
       - name: Create Distr Version
         id: distr-create-version
-        uses: distr-sh/distr-create-version-action@v1.6.2
+        uses: distr-sh/distr-create-version-action@13a9244a46f3d9019f1e2a6c0063f88908fafff3 # v1.6.2
         with:
           api-token: ${{ secrets[matrix.DISTR_TOKEN_SECRET] }}
           api-base: "https://demo.distr.sh/api/v1"
@@ -337,23 +337,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Download compatibility matrix report
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: compatibility-matrix-report
           path: ${{ github.workspace }}/artifacts
 
       - name: Download vulnerability scan report
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: vulnerability-scan-report
           path: ${{ github.workspace }}/artifacts
 
       - name: Create Distr Version
         id: distr-create-version
-        uses: distr-sh/distr-create-version-action@v1.6.2
+        uses: distr-sh/distr-create-version-action@13a9244a46f3d9019f1e2a6c0063f88908fafff3 # v1.6.2
         with:
           api-token: ${{ secrets.DISTR_TOKEN }}
           api-base: "https://demo.distr.sh/api/v1"
