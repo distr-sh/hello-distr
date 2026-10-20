@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Release Please Automerge
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: release-please-automerge
+  cancel-in-progress: false
+
+jobs:
+  merge-release-pr:
+    name: Merge release PR
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find release PR
+        id: find
+        env:
+          # A PAT is required so that the merge triggers the Release Please
+          # workflow, which in turn creates the tag and the Distr release.
+          GH_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
+        run: |
+          pr="$(gh pr list --repo "$GITHUB_REPOSITORY" \
+            --state open \
+            --base main \
+            --label "autorelease: pending" \
+            --json number \
+            --jq '.[0].number // empty')"
+          if [ -z "$pr" ]; then
+            echo "No open release PR found."
+          else
+            echo "Found release PR #$pr"
+          fi
+          echo "pr=$pr" >> "$GITHUB_OUTPUT"
+      - name: Wait for CI checks
+        if: steps.find.outputs.pr != ''
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
+        run: gh pr checks "${{ steps.find.outputs.pr }}" --repo "$GITHUB_REPOSITORY" --watch --interval 30
+      - name: Merge release PR
+        if: steps.find.outputs.pr != ''
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
+        run: gh pr merge "${{ steps.find.outputs.pr }}" --repo "$GITHUB_REPOSITORY" --squash

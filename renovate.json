@@ -3,10 +3,7 @@
   "extends": [
     "config:recommended"
   ],
-  "packageRules": [
-    {
-      "matchManagers": ["npm", "github-actions", "pip_requirements"],
-      "automerge": true
-    }
-  ]
+  "automerge": true,
+  "automergeType": "pr",
+  "ignoreTests": false
 }
