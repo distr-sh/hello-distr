@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.4.11](https://github.com/distr-sh/hello-distr/compare/0.4.10...0.4.11) (2026-10-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v14.5.0 ([#952](https://github.com/distr-sh/hello-distr/issues/952)) ([f0cf158](https://github.com/distr-sh/hello-distr/commit/f0cf15834436cc045dec8fa2bc5b03acebefe6c0))
+
+
+### Other
+
+* **deps:** update dependency eslint-plugin-n to v18.5.0 ([#949](https://github.com/distr-sh/hello-distr/issues/949)) ([93d17c0](https://github.com/distr-sh/hello-distr/commit/93d17c0c4e6d5c257ed0efd1b56c088e77f2a556))
+* **deps:** update dependency osv-scanner to v2.7.0 ([#863](https://github.com/distr-sh/hello-distr/issues/863)) ([17ee508](https://github.com/distr-sh/hello-distr/commit/17ee508323dddb98542f6e1f09bc8a3b2e8378a4))
+* **deps:** update dependency postcss to v8.5.31 ([#948](https://github.com/distr-sh/hello-distr/issues/948)) ([bf65720](https://github.com/distr-sh/hello-distr/commit/bf65720c34ce1ad1e9c3d095bf51d4b6e333be80))
+* **deps:** update dependency python ([#860](https://github.com/distr-sh/hello-distr/issues/860)) ([93a1289](https://github.com/distr-sh/hello-distr/commit/93a1289839b30d7dd1ab1845e5b177487648b38e))
+* **deps:** update typescript-eslint monorepo to v8.72.0 ([#951](https://github.com/distr-sh/hello-distr/issues/951)) ([452958d](https://github.com/distr-sh/hello-distr/commit/452958d9f468c6cd458ed0bec0fa1cbaaa9c5e1e))
+
 ## [0.4.10](https://github.com/distr-sh/hello-distr/compare/0.4.9...0.4.10) (2026-10-20)
 
 
