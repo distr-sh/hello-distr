@@ -10,8 +10,8 @@ maintainers:
     url: https://github.com/distr-sh
 home: https://github.com/distr-sh/hello-distr
 type: application
-version: 0.4.11
-appVersion: 0.4.11
+version: 0.4.12
+appVersion: 0.4.12
 dependencies:
   - name: postgresql
     repository: oci://registry-1.docker.io/bitnamicharts
