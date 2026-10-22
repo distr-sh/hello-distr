@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.12](https://github.com/distr-sh/hello-distr/compare/0.4.11...0.4.12) (2026-10-21)
+
+
+### Other
+
+* **deps:** update dependency python to v3.15.1 ([#953](https://github.com/distr-sh/hello-distr/issues/953)) ([34bdf1a](https://github.com/distr-sh/hello-distr/commit/34bdf1a3c9f315132a46f9cf810970dd936256cd))
+
 ## [0.4.11](https://github.com/distr-sh/hello-distr/compare/0.4.10...0.4.11) (2026-10-21)
 
 
