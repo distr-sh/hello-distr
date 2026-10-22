@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.13](https://github.com/distr-sh/hello-distr/compare/0.4.12...0.4.13) (2026-10-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v14.6.0 ([#955](https://github.com/distr-sh/hello-distr/issues/955)) ([e892ce0](https://github.com/distr-sh/hello-distr/commit/e892ce0ec368acc01740fcdccdcf76ce4b2c5d13))
+
 ## [0.4.12](https://github.com/distr-sh/hello-distr/compare/0.4.11...0.4.12) (2026-10-21)
 
 
