@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.14](https://github.com/distr-sh/hello-distr/compare/0.4.13...0.4.14) (2026-10-23)
+
+
+### Other
+
+* **deps:** update docker/login-action action to v4.7.0 ([#959](https://github.com/distr-sh/hello-distr/issues/959)) ([45359dc](https://github.com/distr-sh/hello-distr/commit/45359dce2ca9989e5b371cea773bbe1ac8a34529))
+* **deps:** update nextjs monorepo to v16.4.3 ([#957](https://github.com/distr-sh/hello-distr/issues/957)) ([53295bf](https://github.com/distr-sh/hello-distr/commit/53295bfe36453f50fbf67e82359f54fcf810d907))
+
 ## [0.4.13](https://github.com/distr-sh/hello-distr/compare/0.4.12...0.4.13) (2026-10-22)
 
 
