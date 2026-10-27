@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.16](https://github.com/distr-sh/hello-distr/compare/0.4.15...0.4.16) (2026-10-27)
+
+
+### Other
+
+* **deps:** update dependency autoprefixer to v10.6.2 ([#963](https://github.com/distr-sh/hello-distr/issues/963)) ([25eacaf](https://github.com/distr-sh/hello-distr/commit/25eacaf1809dc04a28a3a2060ec7bed2f2e50432))
+* **deps:** update dependency postcss to v8.5.32 ([#964](https://github.com/distr-sh/hello-distr/issues/964)) ([8b389f5](https://github.com/distr-sh/hello-distr/commit/8b389f5fb0e8b99238f77beca84a63c72b7167f2))
+* **deps:** update typescript-eslint monorepo to v8.72.1 ([#966](https://github.com/distr-sh/hello-distr/issues/966)) ([298a343](https://github.com/distr-sh/hello-distr/commit/298a3439c26b120f1c31369d528c96175c5cccca))
+
 ## [0.4.15](https://github.com/distr-sh/hello-distr/compare/0.4.14...0.4.15) (2026-10-26)
 
 
