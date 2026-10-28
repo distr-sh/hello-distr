@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.4.17](https://github.com/distr-sh/hello-distr/compare/0.4.16...0.4.17) (2026-10-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v14.7.1 ([#968](https://github.com/distr-sh/hello-distr/issues/968)) ([b035453](https://github.com/distr-sh/hello-distr/commit/b0354535ff5cde38659c9f4e981e82e85c3c5745))
+* invalid env value comment ([#960](https://github.com/distr-sh/hello-distr/issues/960)) ([748bdba](https://github.com/distr-sh/hello-distr/commit/748bdba0ff6221f6d1a59ed66accac7ee746e56d))
+
+
+### Other
+
+* **deps:** update node.js to v26 ([#969](https://github.com/distr-sh/hello-distr/issues/969)) ([fce0df4](https://github.com/distr-sh/hello-distr/commit/fce0df4f4577d1ffc28aad779db77affed6f43ce))
+
 ## [0.4.16](https://github.com/distr-sh/hello-distr/compare/0.4.15...0.4.16) (2026-10-27)
 
 
