@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.18](https://github.com/distr-sh/hello-distr/compare/0.4.17...0.4.18) (2026-10-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v14.8.0 ([#971](https://github.com/distr-sh/hello-distr/issues/971)) ([11c5e0d](https://github.com/distr-sh/hello-distr/commit/11c5e0d83fe254f5fb55500525d64ecefb9c3e66))
+
+
+### Other
+
+* **deps:** update dependency tailwind-variants to v4 ([#972](https://github.com/distr-sh/hello-distr/issues/972)) ([f08d1fe](https://github.com/distr-sh/hello-distr/commit/f08d1fe5f41ac670a3ca4149149240a80df7fae2))
+
 ## [0.4.17](https://github.com/distr-sh/hello-distr/compare/0.4.16...0.4.17) (2026-10-28)
 
 
