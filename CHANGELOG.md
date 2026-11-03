@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.20](https://github.com/distr-sh/hello-distr/compare/0.4.19...0.4.20) (2026-11-02)
+
+
+### Other
+
+* **deps:** update nextjs monorepo to v16.4.4 ([#977](https://github.com/distr-sh/hello-distr/issues/977)) ([17aa427](https://github.com/distr-sh/hello-distr/commit/17aa4270f4e9a905ad6d885a9328657a3ca9c260))
+
 ## [0.4.19](https://github.com/distr-sh/hello-distr/compare/0.4.18...0.4.19) (2026-10-31)
 
 
