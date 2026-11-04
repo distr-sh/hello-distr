@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.21](https://github.com/distr-sh/hello-distr/compare/0.4.20...0.4.21) (2026-11-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v14.9.1 ([#982](https://github.com/distr-sh/hello-distr/issues/982)) ([876baac](https://github.com/distr-sh/hello-distr/commit/876baacd5174cc6c9cebf97a5d1d3b4855e14469))
+
+
+### Other
+
+* **deps:** update nextjs monorepo to v16.4.5 ([#980](https://github.com/distr-sh/hello-distr/issues/980)) ([711fe65](https://github.com/distr-sh/hello-distr/commit/711fe6579ca691a09c42f117bd6a64fa41354a31))
+
 ## [0.4.20](https://github.com/distr-sh/hello-distr/compare/0.4.19...0.4.20) (2026-11-02)
 
 
