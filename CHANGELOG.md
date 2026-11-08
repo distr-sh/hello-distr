@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.4.23](https://github.com/distr-sh/hello-distr/compare/0.4.22...0.4.23) (2026-11-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v14.10.1 ([#989](https://github.com/distr-sh/hello-distr/issues/989)) ([2a2ca29](https://github.com/distr-sh/hello-distr/commit/2a2ca290d44d1112d4323f6d9951582cf3a8038c))
+
+
+### Other
+
+* **deps:** update caddy docker tag to v2.11.9 ([#985](https://github.com/distr-sh/hello-distr/issues/985)) ([75c6dcc](https://github.com/distr-sh/hello-distr/commit/75c6dccb2a174c77f85cba59214da45585c698a7))
+* **deps:** update dependency @playwright/test to v1.65.0 ([#986](https://github.com/distr-sh/hello-distr/issues/986)) ([b765e65](https://github.com/distr-sh/hello-distr/commit/b765e654ef24324d92f7c9cc57d6a2f1c885987c))
+* **deps:** update docker/login-action action to v4.8.0 ([#988](https://github.com/distr-sh/hello-distr/issues/988)) ([ca18283](https://github.com/distr-sh/hello-distr/commit/ca18283c82675e3e335ed38e3b862356797a8307))
+
 ## [0.4.22](https://github.com/distr-sh/hello-distr/compare/0.4.21...0.4.22) (2026-11-04)
 
 
