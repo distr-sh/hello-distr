@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.24](https://github.com/distr-sh/hello-distr/compare/0.4.23...0.4.24) (2026-11-09)
+
+
+### Other
+
+* **deps:** update dependency intl-messageformat to v12.1.5 ([#990](https://github.com/distr-sh/hello-distr/issues/990)) ([55bae3e](https://github.com/distr-sh/hello-distr/commit/55bae3e0bc679b3235924e869d68c6deaff3ce16))
+* **deps:** update dependency osv-scanner to v2.7.1 ([#992](https://github.com/distr-sh/hello-distr/issues/992)) ([5def4ae](https://github.com/distr-sh/hello-distr/commit/5def4ae7e89baf4eabe87ea1f4af9bc277179d56))
+
 ## [0.4.23](https://github.com/distr-sh/hello-distr/compare/0.4.22...0.4.23) (2026-11-07)
 
 
