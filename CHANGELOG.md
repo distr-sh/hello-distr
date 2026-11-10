@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.25](https://github.com/distr-sh/hello-distr/compare/0.4.24...0.4.25) (2026-11-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v14.11.1 ([#994](https://github.com/distr-sh/hello-distr/issues/994)) ([3a26b1d](https://github.com/distr-sh/hello-distr/commit/3a26b1de737720fc14d7b05985693bb9c601be3f))
+
+
+### Other
+
+* **deps:** update azure/setup-helm action to v5.1.0 ([#998](https://github.com/distr-sh/hello-distr/issues/998)) ([d7c616c](https://github.com/distr-sh/hello-distr/commit/d7c616ccd92616ca619f1fbc392b77d2695c7a8a))
+* **deps:** update dependency tailwind-variants to v4.0.2 ([#996](https://github.com/distr-sh/hello-distr/issues/996)) ([38c1da3](https://github.com/distr-sh/hello-distr/commit/38c1da3f238154e331f7c740de7d9a7b215a2cb2))
+* **deps:** update nextjs monorepo to v16.4.6 ([#997](https://github.com/distr-sh/hello-distr/issues/997)) ([49b9296](https://github.com/distr-sh/hello-distr/commit/49b9296c55092b79f47fd00ae8343a02375d19ae))
+* **deps:** update typescript-eslint monorepo to v8.72.2 ([#993](https://github.com/distr-sh/hello-distr/issues/993)) ([11feea1](https://github.com/distr-sh/hello-distr/commit/11feea14c89de99a82fe2d8fc9a7c22bf0c2c1e0))
+
 ## [0.4.24](https://github.com/distr-sh/hello-distr/compare/0.4.23...0.4.24) (2026-11-09)
 
 
