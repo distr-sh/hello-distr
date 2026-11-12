@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.27](https://github.com/distr-sh/hello-distr/compare/0.4.26...0.4.27) (2026-11-11)
+
+
+### Other
+
+* **deps:** update dependency prettier to v3.10.0 ([#1001](https://github.com/distr-sh/hello-distr/issues/1001)) ([f5da165](https://github.com/distr-sh/hello-distr/commit/f5da165377949bfc13145601cd1cdcee6c78271b))
+
 ## [0.4.26](https://github.com/distr-sh/hello-distr/compare/0.4.25...0.4.26) (2026-11-10)
 
 
