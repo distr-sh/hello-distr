@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.4.28](https://github.com/distr-sh/hello-distr/compare/0.4.27...0.4.28) (2026-11-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v14.13.0 ([#1005](https://github.com/distr-sh/hello-distr/issues/1005)) ([0809f9e](https://github.com/distr-sh/hello-distr/commit/0809f9ee2182285cffbe220a5db3e971c1ff35b6))
+
+
+### Other
+
+* **deps:** update dependency prettier to v3.10.1 ([#1003](https://github.com/distr-sh/hello-distr/issues/1003)) ([43b1a65](https://github.com/distr-sh/hello-distr/commit/43b1a65e80af0249753e961fd38996ff82397388))
+* **deps:** update postgres docker tag to v18.7 ([#1006](https://github.com/distr-sh/hello-distr/issues/1006)) ([df57d7d](https://github.com/distr-sh/hello-distr/commit/df57d7df78638d66ee03fcb445906b9fcfeeb425))
+
 ## [0.4.27](https://github.com/distr-sh/hello-distr/compare/0.4.26...0.4.27) (2026-11-11)
 
 
