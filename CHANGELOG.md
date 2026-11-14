@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.4.29](https://github.com/distr-sh/hello-distr/compare/0.4.28...0.4.29) (2026-11-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v14.14.0 ([#1007](https://github.com/distr-sh/hello-distr/issues/1007)) ([3bf7297](https://github.com/distr-sh/hello-distr/commit/3bf7297cc659147ed1002ede08d7e66de0869a60))
+
+
+### Other
+
+* **deps:** update dependency @playwright/test to v1.65.1 ([#1009](https://github.com/distr-sh/hello-distr/issues/1009)) ([410e0d6](https://github.com/distr-sh/hello-distr/commit/410e0d689f5ecfb36e031d5b8d72469c10ec027b))
+* **deps:** update dependency postcss to v8.5.33 ([#1010](https://github.com/distr-sh/hello-distr/issues/1010)) ([ef34b8b](https://github.com/distr-sh/hello-distr/commit/ef34b8b8b66e070ef39c4750cfa09d6b211fc66f))
+
 ## [0.4.28](https://github.com/distr-sh/hello-distr/compare/0.4.27...0.4.28) (2026-11-12)
 
 
