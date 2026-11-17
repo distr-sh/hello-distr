@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.30](https://github.com/distr-sh/hello-distr/compare/0.4.29...0.4.30) (2026-11-16)
+
+
+### Other
+
+* **deps:** update typescript-eslint monorepo to v8.73.0 ([#1011](https://github.com/distr-sh/hello-distr/issues/1011)) ([8a18f62](https://github.com/distr-sh/hello-distr/commit/8a18f62a1924a8195ee6c15228dc143bf2e1ce0e))
+
 ## [0.4.29](https://github.com/distr-sh/hello-distr/compare/0.4.28...0.4.29) (2026-11-14)
 
 
