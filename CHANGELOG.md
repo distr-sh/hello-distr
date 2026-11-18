@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.31](https://github.com/distr-sh/hello-distr/compare/0.4.30...0.4.31) (2026-11-17)
+
+
+### Other
+
+* **deps:** update dependency intl-messageformat to v12.2.0 ([#1013](https://github.com/distr-sh/hello-distr/issues/1013)) ([9a2fbbe](https://github.com/distr-sh/hello-distr/commit/9a2fbbecf90d1de2cc82269946307445766523a7))
+
 ## [0.4.30](https://github.com/distr-sh/hello-distr/compare/0.4.29...0.4.30) (2026-11-16)
 
 
