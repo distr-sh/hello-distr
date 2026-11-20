@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.32](https://github.com/distr-sh/hello-distr/compare/0.4.31...0.4.32) (2026-11-20)
+
+
+### Other
+
+* **deps:** update dependency autoprefixer to v10.7.0 ([#1016](https://github.com/distr-sh/hello-distr/issues/1016)) ([46233da](https://github.com/distr-sh/hello-distr/commit/46233da0fab985dda4b40d397083f859b719f575))
+* **deps:** update dependency tailwind-merge to v3.7.1 ([#1015](https://github.com/distr-sh/hello-distr/issues/1015)) ([f8f62ac](https://github.com/distr-sh/hello-distr/commit/f8f62ac3455a21bc8198cf859350e0a19eb46f4a))
+* **deps:** update postgres docker tag to v19 ([#1018](https://github.com/distr-sh/hello-distr/issues/1018)) ([6ff0609](https://github.com/distr-sh/hello-distr/commit/6ff0609c3ba507dfac2dd92ad2ec6fa9e72dd178))
+
 ## [0.4.31](https://github.com/distr-sh/hello-distr/compare/0.4.30...0.4.31) (2026-11-17)
 
 
