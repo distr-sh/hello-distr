@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.35](https://github.com/distr-sh/hello-distr/compare/0.4.34...0.4.35) (2026-11-25)
+
+
+### Other
+
+* **deps:** update dependency @types/react to v19.3.1 ([#1023](https://github.com/distr-sh/hello-distr/issues/1023)) ([e2a1714](https://github.com/distr-sh/hello-distr/commit/e2a1714625244b04f2f28bf5454cf9e147560439))
+* **deps:** update dependency eslint-plugin-n to v18.6.0 ([#1025](https://github.com/distr-sh/hello-distr/issues/1025)) ([5b1b185](https://github.com/distr-sh/hello-distr/commit/5b1b1856970fe224612b117a37f6da687a9a68c1))
+
 ## [0.4.34](https://github.com/distr-sh/hello-distr/compare/0.4.33...0.4.34) (2026-11-23)
 
 
