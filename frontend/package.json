@@ -58,7 +58,7 @@
     "eslint-plugin-unused-imports": "4.4.1",
     "postcss": "8.5.33",
     "prettier": "3.10.1",
-    "tailwind-variants": "4.0.2",
+    "tailwind-variants": "4.1.0",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3"
   }
