@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.36](https://github.com/distr-sh/hello-distr/compare/0.4.35...0.4.36) (2026-11-25)
+
+
+### Other
+
+* **deps:** update dependency @types/react to v19.3.2 ([#1026](https://github.com/distr-sh/hello-distr/issues/1026)) ([77035f9](https://github.com/distr-sh/hello-distr/commit/77035f99791f7def44597b66b67ccee59ec066e4))
+* **deps:** update dependency @types/react to v19.3.3 ([#1028](https://github.com/distr-sh/hello-distr/issues/1028)) ([3af4311](https://github.com/distr-sh/hello-distr/commit/3af43113dcdb979085ee2603830b560723bca09e))
+
 ## [0.4.35](https://github.com/distr-sh/hello-distr/compare/0.4.34...0.4.35) (2026-11-25)
 
 
