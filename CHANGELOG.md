@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.37](https://github.com/distr-sh/hello-distr/compare/0.4.36...0.4.37) (2026-11-26)
+
+
+### Other
+
+* **deps:** update dependency tailwind-variants to v4.1.0 ([#1029](https://github.com/distr-sh/hello-distr/issues/1029)) ([c1099eb](https://github.com/distr-sh/hello-distr/commit/c1099eb169ccee9e62a6512164c754de1f70d865))
+
 ## [0.4.36](https://github.com/distr-sh/hello-distr/compare/0.4.35...0.4.36) (2026-11-25)
 
 
