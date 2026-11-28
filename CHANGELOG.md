@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.38](https://github.com/distr-sh/hello-distr/compare/0.4.37...0.4.38) (2026-11-28)
+
+
+### Other
+
+* **deps:** update dependency autoprefixer to v10.7.1 ([#1034](https://github.com/distr-sh/hello-distr/issues/1034)) ([c68df30](https://github.com/distr-sh/hello-distr/commit/c68df3051b2e566ba53196473bdb91aa8c7ced96))
+* **deps:** update dependency eslint-config-prettier to v10.1.9 ([#1031](https://github.com/distr-sh/hello-distr/issues/1031)) ([f58115a](https://github.com/distr-sh/hello-distr/commit/f58115af1920bcd49d0d8ac52acc4d8670a0506d))
+* **deps:** update dependency postcss to v8.5.34 ([#1032](https://github.com/distr-sh/hello-distr/issues/1032)) ([46384b2](https://github.com/distr-sh/hello-distr/commit/46384b25e7f527187046c07374b1f717dd990746))
+
 ## [0.4.37](https://github.com/distr-sh/hello-distr/compare/0.4.36...0.4.37) (2026-11-26)
 
 
